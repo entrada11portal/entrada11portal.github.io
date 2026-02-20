@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.site-header {
+  background: #e60202;
+  color: white;
+  padding: 20px;
+}
+
+.site-footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
