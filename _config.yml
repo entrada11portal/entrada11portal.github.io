@@ -1,0 +1,6 @@
+title: Entrada11
+description: Portal de notícias
+baseurl: ""
+url: "https://entrada11portal.github.io"
+markdown: kramdown
+permalink: /:categories/:title/
