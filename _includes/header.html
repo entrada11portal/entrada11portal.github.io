@@ -1,4 +1,4 @@
-<header class="site-header">
+<!--<header class="site-header">
   <h1>Entrada11</h1>
   <nav>
     <a href="{{ '/' | relative_url }}">Home</a>
@@ -6,4 +6,38 @@
     <a href="{{ '/entretenimento' | relative_url }}">Entretenimento</a>
     <a href="{{ '/curiosidades' | relative_url }}">Curiosidades</a>
   </nav>
+</header>--/>
+
+<header>
+    <div class="notification">
+        <svg viewBox="0 0 24 24">
+            <path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 7h18s-3 0-3-7"/>
+            <path d="M13.73 21a2 2 0 01-3.46 0"/>
+        </svg>
+    </div>
+
+    <div class="header-title">entrada11</div>
+
+    <div class="menu-icon" onclick="openMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+<div class="side-menu" id="sideMenu">
+    <div class="menu-header">entrada11</div>
+    <div class="close-btn" onclick="closeMenu()">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu-divider"></div>
+    <div class="menu-links">
+        <a href="#">home</a>
+        <a href="#">notícias</a>
+        <a href="#">entretenimento</a>
+        <a href="#">curiosidades</a>
+    </div>
+</div>
+
 </header>
