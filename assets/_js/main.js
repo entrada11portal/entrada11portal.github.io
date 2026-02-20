@@ -1,4 +1,3 @@
-<script>
 function openMenu() {
     document.getElementById("sideMenu").classList.add("active");
 }
@@ -14,4 +13,3 @@ links.forEach(link => {
         this.classList.add("active");
     });
 });
-
