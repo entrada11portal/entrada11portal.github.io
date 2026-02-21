@@ -16,72 +16,38 @@ links.forEach(link => {
 
 // ============================ CARROSSEL HOME =========================================== //
 
-let indiceNovo = 0;
-const trackNovo = document.getElementById("carouselTrackNovo");
-const slidesNovo = document.querySelectorAll(".carousel-slide-novo");
-const indicadoresNovo = document.getElementById("indicadoresNovo");
+let slideIndex = 0;
+let slides = document.querySelectorAll(".carousel-slide");
+let indicators = document.querySelectorAll(".indicator");
+let totalSlides = slides.length;
 
-/* Criar indicadores */
-slidesNovo.forEach((_, i) => {
-    const ponto = document.createElement("span");
-    ponto.addEventListener("click", () => irParaSlideNovo(i));
-    indicadoresNovo.appendChild(ponto);
-});
+function atualizarSlide() {
+  const track = document.getElementById("carouselTrack");
+  track.style.transform = `translateX(-${slideIndex * 100}%)`;
 
-function atualizarCarouselNovo() {
-    trackNovo.style.transform = `translateX(-${indiceNovo * 100}%)`;
-
-    document.querySelectorAll(".carousel-indicadores-novo span")
-    .forEach((ponto, i) => {
-        ponto.classList.toggle("ativo", i === indiceNovo);
-    });
+  indicators.forEach(ind => ind.classList.remove("active"));
+  if (indicators[slideIndex]) {
+    indicators[slideIndex].classList.add("active");
+  }
 }
 
-function moverSlideNovo(direcao) {
-    indiceNovo = (indiceNovo + direcao + slidesNovo.length) % slidesNovo.length;
-    atualizarCarouselNovo();
+function moverSlide(direcao) {
+  slideIndex += direcao;
+
+  if (slideIndex < 0) slideIndex = totalSlides - 1;
+  if (slideIndex >= totalSlides) slideIndex = 0;
+
+  atualizarSlide();
 }
 
-function irParaSlideNovo(index) {
-    indiceNovo = index;
-    atualizarCarouselNovo();
+function irParaSlide(index) {
+  slideIndex = index;
+  atualizarSlide();
 }
 
-/* Auto slide */
+/* AUTOPLAY */
 setInterval(() => {
-    moverSlideNovo(1);
-}, 5000);
-
-atualizarCarouselNovo();
-
-let indexHome = 0;
-const trackHome = document.getElementById("carouselHome");
-const slidesHome = document.querySelectorAll("#carouselHome .carousel-slide-novo");
-const indicadoresHome = document.getElementById("indicadoresHome");
-
-slidesHome.forEach((_, i) => {
-    const dot = document.createElement("span");
-    dot.addEventListener("click", () => irParaHome(i));
-    indicadoresHome.appendChild(dot);
-});
-
-function atualizarHome() {
-    trackHome.style.transform = `translateX(-${indexHome * 100}%)`;
-    document.querySelectorAll("#indicadoresHome span").forEach((dot,i)=>{
-        dot.classList.toggle("ativo", i === indexHome);
-    });
-}
-
-function moverHome(direcao) {
-    indexHome = (indexHome + direcao + slidesHome.length) % slidesHome.length;
-    atualizarHome();
-}
-
-function irParaHome(i) {
-    indexHome = i;
-    atualizarHome();
-}
-
-setInterval(()=> moverHome(1), 5000);
-
-atualizarHome();
+  slideIndex++;
+  if (slideIndex >= totalSlides) slideIndex = 0;
+  atualizarSlide();
+}, 5000); // troca a cada 5 segundos
