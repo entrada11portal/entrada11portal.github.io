@@ -296,8 +296,6 @@ main {
 
 /* ================= CARROSSEL HOME ================= */
 
-/* ================= CARROSSEL HOME ================= */
-
 .carousel {
   position: relative;
   margin-bottom: 40px;
@@ -321,8 +319,6 @@ main {
   border-radius: 12px;
 }
 
-/* ===== TÍTULO ABAIXO ===== */
-
 .carousel-title {
   margin-top: 15px;
   font-size: 22px;
@@ -337,8 +333,6 @@ main {
 .carousel-title a:hover {
   text-decoration: underline;
 }
-
-/* ===== BOTÕES LATERAIS ===== */
 
 .carousel-btn {
   position: absolute;
@@ -357,11 +351,9 @@ main {
 .prev { left: 15px; }
 .next { right: 15px; }
 
-/* ===== INDICADORES SOBRE A IMAGEM ===== */
-
 .carousel-indicators {
   position: absolute;
-  bottom: 15px; /* distancia da parte inferior da imagem */
+  bottom: 50px; /* distancia da parte inferior da imagem */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
