@@ -3,126 +3,81 @@ layout: default
 title: Home
 ---
 
-<main style="margin-top: calc(10vh + 20px); padding: 15px;">
+<section class="home-carousel">
 
-<!-- ================= DESTAQUE PRINCIPAL ================= -->
+  {% assign hoje = site.time | date: "%s" %}
+  {% assign duas_semanas = 1209600 %} {# 14 dias em segundos #}
 
-<section style="margin-bottom:40px;">
+  {% assign posts_recentes = "" | split: "" %}
 
-<h2 style="font-family: 'Times New Roman', serif; font-size:22px; margin-bottom:15px;">
-Destaques
-</h2>
+  {% for post in site.posts %}
+    {% assign data_post = post.date | date: "%s" %}
+    {% assign diferenca = hoje | minus: data_post %}
 
-<div class="carousel-novo">
+    {% if diferenca < duas_semanas %}
+      {% assign posts_recentes = posts_recentes | push: post %}
+    {% endif %}
+  {% endfor %}
 
-<div class="carousel-wrapper">
-<div class="carousel-track-novo" id="carouselHome">
+  {% assign posts_ordenados = posts_recentes | sort: "views" | reverse %}
 
-<a href="#" class="carousel-link carousel-slide-novo">
-<img src="https://picsum.photos/800/400?10">
-<div class="carousel-titulo">Grande descoberta científica chama atenção mundial</div>
-</a>
-
-<a href="#" class="carousel-link carousel-slide-novo">
-<img src="https://picsum.photos/800/400?11">
-<div class="carousel-titulo">Nova tendência no entretenimento cresce no Brasil</div>
-</a>
-
-<a href="#" class="carousel-link carousel-slide-novo">
-<img src="https://picsum.photos/800/400?12">
-<div class="carousel-titulo">Curiosidade surpreendente viraliza na internet</div>
-</a>
-
-</div>
-</div>
-
-<button class="btn-carousel prev-novo" onclick="moverHome(-1)">❮</button>
-<button class="btn-carousel next-novo" onclick="moverHome(1)">❯</button>
-
-<div class="carousel-indicadores-novo" id="indicadoresHome"></div>
-
-</div>
+  {% for post in posts_ordenados limit:5 %}
+    <div class="carousel-item">
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+        <h2>{{ post.title }}</h2>
+      </a>
+    </div>
+  {% endfor %}
 
 </section>
 
-<!-- ================= ÚLTIMAS NOTÍCIAS ================= -->
+<section class="home-section">
+  <h2>Notícias</h2>
 
-<section style="margin-bottom:40px;">
+  {% assign noticias = site.posts | where: "categories", "noticias" %}
 
-<h2 style="font-family: 'Times New Roman', serif; font-size:22px; margin-bottom:15px;">
-Últimas Notícias
-</h2>
-
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
-
-<a href="#" style="text-decoration:none; color:black;">
-<img src="https://picsum.photos/400/300?21" style="width:100%; height:140px; object-fit:cover; border-radius:8px;">
-<p style="font-family:'Times New Roman', serif; font-weight:bold; margin-top:8px;">
-Pesquisa revela dado surpreendente
-</p>
-</a>
-
-<a href="#" style="text-decoration:none; color:black;">
-<img src="https://picsum.photos/400/300?22" style="width:100%; height:140px; object-fit:cover; border-radius:8px;">
-<p style="font-family:'Times New Roman', serif; font-weight:bold; margin-top:8px;">
-Evento cultural atrai milhares
-</p>
-</a>
-
-<a href="#" style="text-decoration:none; color:black;">
-<img src="https://picsum.photos/400/300?23" style="width:100%; height:140px; object-fit:cover; border-radius:8px;">
-<p style="font-family:'Times New Roman', serif; font-weight:bold; margin-top:8px;">
-Mudança tecnológica impacta mercado
-</p>
-</a>
-
-<a href="#" style="text-decoration:none; color:black;">
-<img src="https://picsum.photos/400/300?24" style="width:100%; height:140px; object-fit:cover; border-radius:8px;">
-<p style="font-family:'Times New Roman', serif; font-weight:bold; margin-top:8px;">
-Nova curiosidade viraliza nas redes
-</p>
-</a>
-
-</div>
+  {% for post in noticias limit:4 %}
+    <div class="card">
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}">
+        <h3>{{ post.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
 
 </section>
 
-<!-- ================= MAIS LIDAS ================= -->
+<section class="home-section">
+  <h2>Curiosidades</h2>
 
-<section style="margin-bottom:40px;">
+  {% assign curiosidades = site.posts | where: "categories", "curiosidades" %}
 
-<h2 style="font-family: 'Times New Roman', serif; font-size:22px; margin-bottom:15px;">
-Mais Lidas
-</h2>
-
-<div style="display:flex; flex-direction:column; gap:15px;">
-
-<a href="#" style="display:flex; gap:15px; text-decoration:none; color:black;">
-<img src="https://picsum.photos/200/200?31" style="width:90px; height:90px; object-fit:cover; border-radius:8px;">
-<p style="font-family:'Times New Roman', serif; font-weight:bold;">
-História curiosa surpreende leitores
-</p>
-</a>
-
-<a href="#" style="display:flex; gap:15px; text-decoration:none; color:black;">
-<img src="https://picsum.photos/200/200?32" style="width:90px; height:90px; object-fit:cover; border-radius:8px;">
-<p style="font-family:'Times New Roman', serif; font-weight:bold;">
-Descoberta arqueológica gera debate
-</p>
-</a>
-
-<a href="#" style="display:flex; gap:15px; text-decoration:none; color:black;">
-<img src="https://picsum.photos/200/200?33" style="width:90px; height:90px; object-fit:cover; border-radius:8px;">
-<p style="font-family:'Times New Roman', serif; font-weight:bold;">
-Fenômeno natural chama atenção
-</p>
-</a>
-
-</div>
+  {% for post in curiosidades limit:4 %}
+    <div class="card">
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}">
+        <h3>{{ post.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
 
 </section>
 
-</main>
+<section class="home-section">
+  <h2>Entretenimento</h2>
 
+  {% assign entretenimento = site.posts | where: "categories", "entretenimento" %}
+
+  {% for post in entretenimento limit:4 %}
+    <div class="card">
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}">
+        <h3>{{ post.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+
+</section>
 <!--<h2>Bem-vindo ao Entrada11</h2>
 <p>Projeto reiniciado com estrutura limpa.</p>-->
