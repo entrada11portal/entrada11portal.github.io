@@ -7,55 +7,78 @@ title: Home
 
 <!-- ================= CARROSSEL ================ -->
 
-<div class="carousel-novo">
+---
+layout: default
+title: Home
+---
 
-    <div class="carousel-wrapper">
-        <div class="carousel-track-novo" id="carouselTrackNovo">
+{% assign todos_posts = site.posts %}
 
-            <div class="carousel-slide-novo">
-                <a href="youtube.com" class="carousel-link">
-                     <img src="https://picsum.photos/800/400?11">
-                     <div class="carousel-titulo">Matéria relacionada número 1</div>
-                </a>
-            </div>
+<!-- ================= CARROSSEL ================= -->
 
-            <div class="carousel-slide-novo">
-                <a href="youtube.com" class="carousel-link">
-                     <img src="https://picsum.photos/800/400?12">
-                     <div class="carousel-titulo">Matéria relacionada número 2</div>
-                </a>
-            </div>
+<div class="carousel">
 
-            <div class="carousel-slide-novo">
-                <a href="materia2.html" class="carousel-link">
-                     <img src="https://picsum.photos/800/400?13">
-                     <div class="carousel-titulo">Matéria relacionada número 3</div>
-                </a>
-            </div>
+  <div class="carousel-track" id="carouselTrack">
 
-            <div class="carousel-slide-novo">
-                <a href="materia2.html" class="carousel-link">
-                     <img src="https://picsum.photos/800/400?14">
-                     <div class="carousel-titulo">Matéria relacionada número 4</div>
-                </a>
-            </div>
-
-            <div class="carousel-slide-novo">
-                <a href="materia2.html" class="carousel-link">
-                     <img src="https://picsum.photos/800/400?15">
-                     <div class="carousel-titulo">Matéria relacionada número 5</div>
-                </a>
-            </div>
-
+    {% for post in todos_posts limit:3 %}
+      <div class="carousel-slide">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+        <div class="carousel-title">
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
         </div>
-    </div>
+      </div>
+    {% endfor %}
 
-    <button class="btn-carousel prev-novo" onclick="moverSlideNovo(-1)">❮</button>
-    <button class="btn-carousel next-novo" onclick="moverSlideNovo(1)">❯</button>
+  </div>
 
-    <div class="carousel-indicadores-novo" id="indicadoresNovo"></div>
+  <!-- Botões -->
+  <button class="carousel-btn prev" onclick="moverSlide(-1)">❮</button>
+  <button class="carousel-btn next" onclick="moverSlide(1)">❯</button>
+
+  <!-- Indicadores -->
+  <div class="carousel-indicators" id="carouselIndicators">
+    {% for post in todos_posts limit:3 %}
+      <span class="indicator {% if forloop.first %}active{% endif %}" 
+            onclick="irParaSlide({{ forloop.index0 }})"></span>
+    {% endfor %}
+  </div>
 
 </div>
+
+
+<!-- ================= LISTA ABAIXO ================= -->
+
+<section class="pagina-noticias">
+
+  {% for post in todos_posts offset:3 limit:8 %}
+
+    <article class="noticia-item">
+
+      <div class="noticia-imagem">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+      </div>
+
+      <div class="noticia-conteudo">
+        <a href="{{ post.url | relative_url }}" class="noticia-titulo">
+          {{ post.title }}
+        </a>
+      </div>
+
+    </article>
+
+    {% unless forloop.last %}
+      <div class="linha-divisoria"></div>
+    {% endunless %}
+
+  {% endfor %}
+
+</section>
 
 <!-- ================= LISTA ABAIXO ================= -->
 
