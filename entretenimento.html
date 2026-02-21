@@ -5,9 +5,9 @@ title: Entretenimento
 
 <section class="pagina-noticias">
 
-  {% assign noticias = site.posts | where: "categories", "entretenimento" %}
+  {% assign posts_categoria = site.posts | where: "categories", "entretenimento" %}
 
-  {% for post in noticias %}
+  {% for post in posts_categoria %}
     
     <article class="noticia-item">
       
@@ -25,7 +25,9 @@ title: Entretenimento
 
     </article>
 
-    <div class="linha-divisoria"></div>
+    {% unless forloop.last %}
+      <div class="linha-divisoria"></div>
+    {% endunless %}
 
   {% endfor %}
 
