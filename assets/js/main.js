@@ -13,3 +13,19 @@ links.forEach(link => {
         this.classList.add("active");
     });
 });
+
+// ============================ Carrossel da página Home =========================================== //
+
+let slideIndex = 0;
+
+function moverSlide(direcao) {
+  const track = document.getElementById("carouselTrack");
+  const slides = document.querySelectorAll(".carousel-slide");
+
+  slideIndex += direcao;
+
+  if (slideIndex < 0) slideIndex = slides.length - 1;
+  if (slideIndex >= slides.length) slideIndex = 0;
+
+  track.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
