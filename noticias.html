@@ -3,6 +3,8 @@ layout: default
 title: Notícias
 ---
 
+{% include lista-categoria.html categoria="noticias" %}
+
 <section class="pagina-noticias">
 
   {% assign noticias = site.posts | where: "categories", "noticias" %}
