@@ -5,29 +5,49 @@ title: Entretenimento
 
 <section class="pagina-noticias">
 
-  {% assign posts_categoria = site.posts | where: "categories", "entretenimento" %}
+  {% assign entretenimento = site.posts | where: "categories", "entretenimento" %}
 
-  {% for post in posts_categoria %}
-    
-    <article class="noticia-item">
-      
-      <div class="noticia-imagem">
+  {% for post in entretenimento %}
+
+    {% if forloop.first %}
+      <!-- ===== DESTAQUE ===== -->
+      <article class="noticia-destaque">
+
         <a href="{{ post.url | relative_url }}">
           <img src="{{ post.image }}" alt="{{ post.title }}">
         </a>
-      </div>
 
-      <div class="noticia-conteudo">
-        <a href="{{ post.url | relative_url }}" class="noticia-titulo">
+        <a href="{{ post.url | relative_url }}" class="destaque-titulo">
           {{ post.title }}
         </a>
-      </div>
 
-    </article>
+      </article>
 
-    {% unless forloop.last %}
       <div class="linha-divisoria"></div>
-    {% endunless %}
+
+    {% else %}
+      <!-- ===== LISTA NORMAL ===== -->
+      <article class="noticia-item">
+
+        <div class="noticia-imagem">
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+          </a>
+        </div>
+
+        <div class="noticia-conteudo">
+          <a href="{{ post.url | relative_url }}" class="noticia-titulo">
+            {{ post.title }}
+          </a>
+        </div>
+
+      </article>
+
+      {% unless forloop.last %}
+        <div class="linha-divisoria"></div>
+      {% endunless %}
+
+    {% endif %}
 
   {% endfor %}
 
