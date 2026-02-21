@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<main>
+
+<div class="autor">{{ page.author }}</div>
+<div class="data">
+  {{ page.date | date: "%d/%m/%Y - %H:%M" }}
+</div>
+
+<div class="titulo">{{ page.title }}</div>
+
+<div class="subtitulo">
+  {{ page.subtitle }}
+</div>
+
+<div class="imagem-container">
+    <img src="{{ page.image }}" alt="{{ page.title }}">
+</div>
+
+<div class="descricao-imagem">
+  {{ page.image_description }}
+</div>
+
+<div class="conteudo">
+  {{ content }}
+</div>
+
+<div class="quadro-destaque">
+  <p style="font-weight: bold;">Referências</p>
+  <p style="font-size: 15px;">
+    Este é um quadro de destaque para informações complementares,
+    curiosidades ou observações importantes relacionadas ao conteúdo.
+  </p>
+</div>
+
+</main>
