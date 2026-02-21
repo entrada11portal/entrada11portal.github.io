@@ -225,7 +225,7 @@ main {
 
 .noticia-item {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -248,7 +248,7 @@ main {
 
 .noticia-titulo {
   font-family: "Times New Roman", serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   color: black;
   text-decoration: none;
@@ -261,10 +261,10 @@ main {
 
 /* Linha grossa vermelha */
 .linha-divisoria {
-  height: 6px;
+  height: 4px;
   background: #e60202;
   border-radius: 10px;
-  margin: 25px 0;
+  margin: 10px 0;
 }
 
 /* ================= NOVO CARROSSEL ================= */
