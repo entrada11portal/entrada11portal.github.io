@@ -296,6 +296,8 @@ main {
 
 /* ================= CARROSSEL HOME ================= */
 
+/* ================= CARROSSEL HOME ================= */
+
 .carousel {
   position: relative;
   margin-bottom: 40px;
@@ -309,14 +311,17 @@ main {
 .carousel-slide {
   min-width: 100%;
   text-align: center;
+  position: relative; /* IMPORTANTE */
 }
 
 .carousel-slide img {
   width: 100%;
-  height: 33vh; /* 1/3 da altura da tela */
+  height: 33vh;
   object-fit: cover;
   border-radius: 12px;
 }
+
+/* ===== TÍTULO ABAIXO ===== */
 
 .carousel-title {
   margin-top: 15px;
@@ -333,7 +338,7 @@ main {
   text-decoration: underline;
 }
 
-/* Botões */
+/* ===== BOTÕES LATERAIS ===== */
 
 .carousel-btn {
   position: absolute;
@@ -346,32 +351,38 @@ main {
   cursor: pointer;
   font-size: 18px;
   border-radius: 50%;
+  z-index: 3;
 }
 
 .prev { left: 15px; }
 .next { right: 15px; }
 
-/* Indicadores */
+/* ===== INDICADORES SOBRE A IMAGEM ===== */
 
 .carousel-indicators {
-  text-align: center;
-  margin-top: 15px;
+  position: absolute;
+  bottom: 15px; /* distancia da parte inferior da imagem */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
 }
 
 .indicator {
-  display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 5px;
-  background: #ccc;
+  background: rgba(255,255,255,0.6);
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .indicator.active {
   background: #e60202;
+  transform: scale(1.2);
 }
+
 /* ================= QUADRO CINZA ================= */
 
 .quadro-destaque {
