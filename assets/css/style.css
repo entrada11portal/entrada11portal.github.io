@@ -219,91 +219,30 @@ main {
 
 /* ================= NOVO CARROSSEL ================= */
 
-.carousel-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+.home-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
-.carousel-novo {
-    position: relative;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    overflow: hidden;
+.carousel-item {
+  min-width: 300px;
 }
 
-.carousel-wrapper {
-    overflow: hidden;
+.carousel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.carousel-track-novo {
-    display: flex;
-    transition: transform 0.5s ease;
+.home-section {
+  margin-bottom: 60px;
 }
 
-.carousel-slide-novo {
-    min-width: 100%;
+.card {
+  margin-bottom: 20px;
 }
-
-.carousel-slide-novo img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
-}
-
-.carousel-titulo {
-    padding: 12px;
-    font-family: "Times New Roman", serif;
-    font-size: 18px;
-    font-weight: bold;
-    background: white;
-}
-
-/* Botões */
-
-.btn-carousel {
-    position: absolute;
-    top: 110px;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    border: none;
-    color: white;
-    font-size: 18px;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.prev-novo { left: 10px; }
-.next-novo { right: 10px; }
-
-/* Indicadores */
-
-.carousel-indicadores-novo {
-    position: absolute;
-    bottom: 70px; /* distância do fundo da imagem */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-}
-
-.carousel-indicadores-novo span {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin: 0 4px;
-    background: rgba(255,255,255,0.6);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.carousel-indicadores-novo .ativo {
-    background: white;
-}
-
 
 /* ================= QUADRO CINZA ================= */
 
