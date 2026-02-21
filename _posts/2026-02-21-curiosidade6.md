@@ -1,1 +1,16 @@
+---
+layout: post
+title: "Sexta Curiosidade"
+subtitle: "Subtítulo da matéria"
+date: 2026-02-21
+author: "Redação"
+categories: curiosidades
+tags: [politica]
+image: https://harus.ind.br/wp-content/uploads/2023/02/5-praias-brasileiras-1024x768.jpg
+image_description: "Imagem ilustrativa"
+---
+
+Aqui começa o texto da matéria.
+
+Você pode escrever normalmente.
 
