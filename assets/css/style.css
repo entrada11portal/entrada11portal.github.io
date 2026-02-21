@@ -353,7 +353,7 @@ main {
 
 .carousel-indicators {
   position: absolute;
-  bottom: 100px; /* distancia da parte inferior da imagem */
+  bottom: -20px; /* distancia da parte inferior da imagem */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
