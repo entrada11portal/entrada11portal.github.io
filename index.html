@@ -15,22 +15,33 @@ title: Home
       <div class="carousel-slide">
         <a href="{{ post.url | relative_url }}">
           <img src="{{ post.image }}" alt="{{ post.title }}">
-          <div class="carousel-caption">
-            {{ post.title }}
-          </div>
         </a>
+        <div class="carousel-title">
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </div>
       </div>
     {% endfor %}
 
   </div>
 
+  <!-- Botões -->
   <button class="carousel-btn prev" onclick="moverSlide(-1)">❮</button>
   <button class="carousel-btn next" onclick="moverSlide(1)">❯</button>
+
+  <!-- Indicadores -->
+  <div class="carousel-indicators" id="carouselIndicators">
+    {% for post in todos_posts limit:3 %}
+      <span class="indicator {% if forloop.first %}active{% endif %}" 
+            onclick="irParaSlide({{ forloop.index0 }})"></span>
+    {% endfor %}
+  </div>
 
 </div>
 
 
-<!-- ================= LISTA DE POSTS ================= -->
+<!-- ================= LISTA ABAIXO ================= -->
 
 <section class="pagina-noticias">
 
