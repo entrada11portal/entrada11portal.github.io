@@ -4,3 +4,58 @@ title: Home
 ---
 
 {% assign todos_posts = site.posts %}
+
+<!-- ================= CARROSSEL ================= -->
+
+<div class="carousel">
+
+  <div class="carousel-track" id="carouselTrack">
+
+    {% for post in todos_posts limit:3 %}
+      <div class="carousel-slide">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+          <div class="carousel-caption">
+            {{ post.title }}
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+
+  </div>
+
+  <button class="carousel-btn prev" onclick="moverSlide(-1)">❮</button>
+  <button class="carousel-btn next" onclick="moverSlide(1)">❯</button>
+
+</div>
+
+
+<!-- ================= LISTA DE POSTS ================= -->
+
+<section class="pagina-noticias">
+
+  {% for post in todos_posts offset:3 limit:8 %}
+
+    <article class="noticia-item">
+
+      <div class="noticia-imagem">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+      </div>
+
+      <div class="noticia-conteudo">
+        <a href="{{ post.url | relative_url }}" class="noticia-titulo">
+          {{ post.title }}
+        </a>
+      </div>
+
+    </article>
+
+    {% unless forloop.last %}
+      <div class="linha-divisoria"></div>
+    {% endunless %}
+
+  {% endfor %}
+
+</section>
