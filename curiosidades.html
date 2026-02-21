@@ -2,32 +2,5 @@
 layout: default
 title: Curiosidades
 ---
-<section class="pagina-noticias">
 
-  {% assign posts_categoria = site.posts | where: "categories", "curiosidades" %}
-
-  {% for post in posts_categoria %}
-    
-    <article class="noticia-item">
-      
-      <div class="noticia-imagem">
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image }}" alt="{{ post.title }}">
-        </a>
-      </div>
-
-      <div class="noticia-conteudo">
-        <a href="{{ post.url | relative_url }}" class="noticia-titulo">
-          {{ post.title }}
-        </a>
-      </div>
-
-    </article>
-
-    {% unless forloop.last %}
-      <div class="linha-divisoria"></div>
-    {% endunless %}
-
-  {% endfor %}
-
-</section>
+{% include lista-categoria.html categoria="curiosidades" %}
