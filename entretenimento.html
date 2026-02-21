@@ -3,6 +3,30 @@ layout: default
 title: Entretenimento
 ---
 
-<h2>Página de Entretenimento</h2>
-<p>Aqui aparecerão as matérias da categoria entretenimento.</p>
+<section class="pagina-noticias">
 
+  {% assign noticias = site.posts | where: "categories", "entretenimento" %}
+
+  {% for post in noticias %}
+    
+    <article class="noticia-item">
+      
+      <div class="noticia-imagem">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+      </div>
+
+      <div class="noticia-conteudo">
+        <a href="{{ post.url | relative_url }}" class="noticia-titulo">
+          {{ post.title }}
+        </a>
+      </div>
+
+    </article>
+
+    <div class="linha-divisoria"></div>
+
+  {% endfor %}
+
+</section>
