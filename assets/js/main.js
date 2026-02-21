@@ -17,15 +17,37 @@ links.forEach(link => {
 // ============================ CARROSSEL HOME =========================================== //
 
 let slideIndex = 0;
+let slides = document.querySelectorAll(".carousel-slide");
+let indicators = document.querySelectorAll(".indicator");
+let totalSlides = slides.length;
+
+function atualizarSlide() {
+  const track = document.getElementById("carouselTrack");
+  track.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+  indicators.forEach(ind => ind.classList.remove("active"));
+  if (indicators[slideIndex]) {
+    indicators[slideIndex].classList.add("active");
+  }
+}
 
 function moverSlide(direcao) {
-  const track = document.getElementById("carouselTrack");
-  const slides = document.querySelectorAll(".carousel-slide");
-
   slideIndex += direcao;
 
-  if (slideIndex < 0) slideIndex = slides.length - 1;
-  if (slideIndex >= slides.length) slideIndex = 0;
+  if (slideIndex < 0) slideIndex = totalSlides - 1;
+  if (slideIndex >= totalSlides) slideIndex = 0;
 
-  track.style.transform = `translateX(-${slideIndex * 100}%)`;
+  atualizarSlide();
 }
+
+function irParaSlide(index) {
+  slideIndex = index;
+  atualizarSlide();
+}
+
+/* AUTOPLAY */
+setInterval(() => {
+  slideIndex++;
+  if (slideIndex >= totalSlides) slideIndex = 0;
+  atualizarSlide();
+}, 5000); // troca a cada 5 segundos
