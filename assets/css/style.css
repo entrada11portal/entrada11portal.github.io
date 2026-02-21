@@ -267,8 +267,6 @@ main {
   margin: 25px 0;
 }
 
-/* altereção*/
-
 /* ===== DESTAQUE PRINCIPAL NA PÁGINA DE NOTÍCIAS, ENTRETENIMENTO E CURIOSIDADES ===== */
 
 .noticia-destaque {
@@ -277,7 +275,7 @@ main {
 
 .noticia-destaque img {
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   object-fit: cover;
   border-radius: 10px;
 }
