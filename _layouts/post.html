@@ -55,17 +55,14 @@ layout: default
 
     {% for post in relacionados %}
       <div class="carousel-slide">
-
-        <a href="{{ post.url | relative_url }}">
+        <a href="{{ post.url | relative_url }}" class="carousel-slide">
+        <div class="carousel-image-wrapper">
           <img src="{{ post.image }}" alt="{{ post.title }}">
-        </a>
-
-        <div class="carousel-title">
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
-          </a>
         </div>
-
+        <div class="carousel-title">
+          {{ post.title }}
+        </div>
+        </a>
       </div>
     {% endfor %}
 
