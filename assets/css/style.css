@@ -376,6 +376,11 @@ main {
   opacity: 1;
 }
 
+/* ================= CARROSSEL POST ================= */
+
+.relacionados-carousel {
+  margin-top: 20px;
+}
 /* ================= QUADRO CINZA ================= */
 
 .quadro-destaque {
