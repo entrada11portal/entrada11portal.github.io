@@ -54,55 +54,47 @@ setInterval(() => {
 
 // ============================ CARROSSEL POST =========================================== //
 
-const trackRelacionados = document.getElementById("carouselRelacionados");
+const track = document.getElementById("carouselTrack");
 
-if (trackRelacionados) {
+if (track) {
 
-  let slideAtualRelacionados = 0;
-  const slidesRelacionados = trackRelacionados.children;
-  const totalSlidesRelacionados = slidesRelacionados.length;
-  const indicadoresRelacionados =
-    document.querySelectorAll(".relacionados-carousel .indicator");
+  let slideAtual = 0;
+  const slides = track.children;
+  const totalSlides = slides.length;
+  const indicadores =
+    document.querySelectorAll(".carousel:not(.relacionados-carousel) .indicator");
 
-  function atualizarRelacionados() {
-    trackRelacionados.style.transform =
-      `translate3d(-${slideAtualRelacionados * 100}%, 0, 0)`;
+  function atualizarSlide() {
+    track.style.transform =
+      `translate3d(-${slideAtual * 100}%, 0, 0)`;
 
-    indicadoresRelacionados.forEach(ind =>
+    indicadores.forEach(ind =>
       ind.classList.remove("active")
     );
 
-    if (indicadoresRelacionados[slideAtualRelacionados]) {
-      indicadoresRelacionados[slideAtualRelacionados]
-        .classList.add("active");
+    if (indicadores[slideAtual]) {
+      indicadores[slideAtual].classList.add("active");
     }
   }
 
-  function moverSlideRelacionados(direcao) {
-    slideAtualRelacionados += direcao;
+  function moverSlide(direcao) {
+    slideAtual += direcao;
 
-    if (slideAtualRelacionados >= totalSlidesRelacionados) {
-      slideAtualRelacionados = 0;
-    }
+    if (slideAtual >= totalSlides) slideAtual = 0;
+    if (slideAtual < 0) slideAtual = totalSlides - 1;
 
-    if (slideAtualRelacionados < 0) {
-      slideAtualRelacionados = totalSlidesRelacionados - 1;
-    }
-
-    atualizarRelacionados();
+    atualizarSlide();
   }
 
-  function irParaSlideRelacionados(index) {
-    slideAtualRelacionados = index;
-    atualizarRelacionados();
+  function irParaSlide(index) {
+    slideAtual = index;
+    atualizarSlide();
   }
 
-  /* AUTOPLAY */
   setInterval(() => {
-    moverSlideRelacionados(1);
+    moverSlide(1);
   }, 5000);
 
-  /* Torna funções acessíveis aos botões */
-  window.moverSlideRelacionados = moverSlideRelacionados;
-  window.irParaSlideRelacionados = irParaSlideRelacionados;
+  window.moverSlide = moverSlide;
+  window.irParaSlide = irParaSlide;
 }
