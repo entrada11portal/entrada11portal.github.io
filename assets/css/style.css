@@ -324,11 +324,23 @@ main {
 
 /* Título */
 
+.carousel-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.carousel-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .carousel-title {
   margin-top: 12px;
   font-size: 22px;
   font-weight: bold;
   text-align: center;
+  color: black;
 }
 
 /* Botões laterais */
