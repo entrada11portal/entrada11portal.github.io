@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "33ª Brasília Restaurant Week movimenta a gastronomia da capital federal"
-subtitle: "Trigésima terceira edição oferece pratos com preços fixos com entrada, prato principal e sobremesa"
+subtitle: "Trigésima terceira edição oferece pratos com preços fixos com entrada, prato principal e sobremesa."
 date: 2026-02-22
 author: "Val de Medeiros"
 categories: entretenimento
@@ -17,8 +17,8 @@ Nesta edição, o tema escolhido é “A Cozinha dos Campeões”, inspirada na 
 Restaurantes participantes:
 
 Menu Tradicional
-. Bella e Rô Restaurante
-. Benita Paninoteca
+<p>. Bella e Rô Restaurante</p>
+<p>. Benita Paninoteca</p>
 . BSquare Pizza Burger
 . Bu.té.quim
 . Dona Lenha
