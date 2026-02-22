@@ -54,29 +54,42 @@ setInterval(() => {
 
 // ============================ CARROSSEL POST =========================================== //
 
-let slideIndexRelacionados = 0;
+let slideAtualRelacionados = 0;
 const trackRelacionados = document.getElementById("carouselRelacionados");
-const slidesRelacionados = document.querySelectorAll("#carouselRelacionados .carousel-slide");
-const indicatorsRelacionados = document.querySelectorAll(".relacionados-carousel .indicator");
+const slidesRelacionados = trackRelacionados.children;
+const totalSlidesRelacionados = slidesRelacionados.length;
+const indicadoresRelacionados = document.querySelectorAll(".relacionados-carousel .indicator");
 
 function atualizarRelacionados() {
-  trackRelacionados.style.transform = "translate3d(-" + (slideIndexRelacionados * 100) + "%, 0, 0)";
-  
-  indicatorsRelacionados.forEach((indicator, index) => {
-    indicator.classList.toggle("active", index === slideIndexRelacionados);
-  });
+  trackRelacionados.style.transform =
+    `translateX(-${slideAtualRelacionados * 100}%)`;
+
+  indicadoresRelacionados.forEach(ind => ind.classList.remove("active"));
+  if (indicadoresRelacionados[slideAtualRelacionados]) {
+    indicadoresRelacionados[slideAtualRelacionados].classList.add("active");
+  }
 }
 
 function moverSlideRelacionados(direcao) {
-  slideIndexRelacionados += direcao;
+  slideAtualRelacionados += direcao;
 
-  if (slideIndexRelacionados >= slidesRelacionados.length) slideIndexRelacionados = 0;
-  if (slideIndexRelacionados < 0) slideIndexRelacionados = slidesRelacionados.length - 1;
+  if (slideAtualRelacionados >= totalSlidesRelacionados) {
+    slideAtualRelacionados = 0;
+  }
+
+  if (slideAtualRelacionados < 0) {
+    slideAtualRelacionados = totalSlidesRelacionados - 1;
+  }
 
   atualizarRelacionados();
 }
 
 function irParaSlideRelacionados(index) {
-  slideIndexRelacionados = index;
+  slideAtualRelacionados = index;
   atualizarRelacionados();
 }
+
+/* AUTOPLAY */
+setInterval(() => {
+  moverSlideRelacionados(1);
+}, 5000); // troca a cada 5 segundos
