@@ -34,7 +34,7 @@ layout: default
 
 {% assign relacionados = "" | split: "" %}
 
-<!-- 1️⃣ Primeiro: posts com mesma tag -->
+<!-- Primeiro: posts com mesma tag -->
 {% for post in site.posts %}
   {% if post.url != page.url %}
     {% assign tag_match = false %}
@@ -50,7 +50,7 @@ layout: default
   {% endif %}
 {% endfor %}
 
-<!-- 2️⃣ Se tiver menos de 5, completar com mais recentes -->
+<!-- Se tiver menos de 5, completar com mais recentes -->
 {% if relacionados.size < 5 %}
   {% for post in site.posts %}
     {% if post.url != page.url and relacionados contains post == false %}
@@ -59,7 +59,7 @@ layout: default
   {% endfor %}
 {% endif %}
 
-<!-- 3️⃣ Ordenar e limitar -->
+<!-- Ordenar e limitar -->
 {% assign relacionados = relacionados | sort: "date" | reverse %}
 {% assign relacionados = relacionados | slice: 0,5 %}
 
@@ -94,3 +94,4 @@ layout: default
     {% endfor %}
   </div>
 </div>
+</main>
