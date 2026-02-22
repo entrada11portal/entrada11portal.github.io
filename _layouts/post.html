@@ -1,3 +1,32 @@
+---
+layout: default
+---
+
+<main>
+
+<div class="autor">{{ page.author }}</div>
+<div class="data">
+  {{ page.date | date: "%d/%m/%Y - %H:%M" }}
+</div>
+
+<div class="titulo">{{ page.title }}</div>
+
+<div class="subtitulo">
+  {{ page.subtitle }}
+</div>
+
+<div class="imagem-container">
+    <img src="{{ page.image }}" alt="{{ page.title }}">
+</div>
+
+<div class="descricao-imagem">
+  {{ page.image_description }}
+</div>
+
+<div class="conteudo">
+  {{ content }}
+</div>
+
 <!-- ==================== CARROSSEL POST ========================== -->
 
 <hr style="margin:50px 0;">
