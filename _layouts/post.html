@@ -1,56 +1,40 @@
----
-layout: default
----
-
-<main>
-
-<div class="autor">{{ page.author }}</div>
-<div class="data">
-  {{ page.date | date: "%d/%m/%Y - %H:%M" }}
-</div>
-
-<div class="titulo">{{ page.title }}</div>
-
-<div class="subtitulo">
-  {{ page.subtitle }}
-</div>
-
-<div class="imagem-container">
-    <img src="{{ page.image }}" alt="{{ page.title }}">
-</div>
-
-<div class="descricao-imagem">
-  {{ page.image_description }}
-</div>
-
-<div class="conteudo">
-  {{ content }}
-</div>
-
 <!-- ==================== CARROSSEL POST ========================== -->
 
-  <hr style="margin:50px 0;">
-
+<hr style="margin:50px 0;">
 <h3 style="margin-bottom:20px;">Artigos relacionados</h3>
 
 {% assign relacionados = "" | split: "" %}
 
+<!-- 1️⃣ Primeiro: posts com mesma tag -->
 {% for post in site.posts %}
   {% if post.url != page.url %}
+    {% assign tag_match = false %}
     {% for tag in post.tags %}
       {% if page.tags contains tag %}
-        {% assign relacionados = relacionados | push: post %}
-        {% break %}
+        {% assign tag_match = true %}
       {% endif %}
     {% endfor %}
+
+    {% if tag_match %}
+      {% assign relacionados = relacionados | push: post %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
+<!-- 2️⃣ Se tiver menos de 5, completar com mais recentes -->
+{% if relacionados.size < 5 %}
+  {% for post in site.posts %}
+    {% if post.url != page.url and relacionados contains post == false %}
+      {% assign relacionados = relacionados | push: post %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<!-- 3️⃣ Ordenar e limitar -->
 {% assign relacionados = relacionados | sort: "date" | reverse %}
 {% assign relacionados = relacionados | slice: 0,5 %}
 
 <div class="carousel relacionados-carousel">
-
   <div class="carousel-track" id="carouselRelacionados">
 
     {% for post in relacionados %}
@@ -80,7 +64,4 @@ layout: default
             onclick="irParaSlideRelacionados({{ forloop.index0 }})"></span>
     {% endfor %}
   </div>
-
 </div>
-
-</main>
