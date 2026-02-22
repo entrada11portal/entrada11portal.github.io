@@ -54,42 +54,55 @@ setInterval(() => {
 
 // ============================ CARROSSEL POST =========================================== //
 
-let slideAtualRelacionados = 0;
 const trackRelacionados = document.getElementById("carouselRelacionados");
-const slidesRelacionados = trackRelacionados.children;
-const totalSlidesRelacionados = slidesRelacionados.length;
-const indicadoresRelacionados = document.querySelectorAll(".relacionados-carousel .indicator");
 
-function atualizarRelacionados() {
-  trackRelacionados.style.transform =
-    `translateX(-${slideAtualRelacionados * 100}%)`;
+if (trackRelacionados) {
 
-  indicadoresRelacionados.forEach(ind => ind.classList.remove("active"));
-  if (indicadoresRelacionados[slideAtualRelacionados]) {
-    indicadoresRelacionados[slideAtualRelacionados].classList.add("active");
-  }
-}
+  let slideAtualRelacionados = 0;
+  const slidesRelacionados = trackRelacionados.children;
+  const totalSlidesRelacionados = slidesRelacionados.length;
+  const indicadoresRelacionados =
+    document.querySelectorAll(".relacionados-carousel .indicator");
 
-function moverSlideRelacionados(direcao) {
-  slideAtualRelacionados += direcao;
+  function atualizarRelacionados() {
+    trackRelacionados.style.transform =
+      `translate3d(-${slideAtualRelacionados * 100}%, 0, 0)`;
 
-  if (slideAtualRelacionados >= totalSlidesRelacionados) {
-    slideAtualRelacionados = 0;
-  }
+    indicadoresRelacionados.forEach(ind =>
+      ind.classList.remove("active")
+    );
 
-  if (slideAtualRelacionados < 0) {
-    slideAtualRelacionados = totalSlidesRelacionados - 1;
+    if (indicadoresRelacionados[slideAtualRelacionados]) {
+      indicadoresRelacionados[slideAtualRelacionados]
+        .classList.add("active");
+    }
   }
 
-  atualizarRelacionados();
-}
+  function moverSlideRelacionados(direcao) {
+    slideAtualRelacionados += direcao;
 
-function irParaSlideRelacionados(index) {
-  slideAtualRelacionados = index;
-  atualizarRelacionados();
-}
+    if (slideAtualRelacionados >= totalSlidesRelacionados) {
+      slideAtualRelacionados = 0;
+    }
 
-/* AUTOPLAY */
-setInterval(() => {
-  moverSlideRelacionados(1);
-}, 5000); // troca a cada 5 segundos
+    if (slideAtualRelacionados < 0) {
+      slideAtualRelacionados = totalSlidesRelacionados - 1;
+    }
+
+    atualizarRelacionados();
+  }
+
+  function irParaSlideRelacionados(index) {
+    slideAtualRelacionados = index;
+    atualizarRelacionados();
+  }
+
+  /* AUTOPLAY */
+  setInterval(() => {
+    moverSlideRelacionados(1);
+  }, 5000);
+
+  /* Torna funções acessíveis aos botões */
+  window.moverSlideRelacionados = moverSlideRelacionados;
+  window.irParaSlideRelacionados = irParaSlideRelacionados;
+}
