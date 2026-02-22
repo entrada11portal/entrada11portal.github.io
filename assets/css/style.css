@@ -335,7 +335,7 @@ main {
 
 .carousel-btn {
   position: absolute;
-  top: 16vh;
+  top: 12vh;
   transform: translateY(-50%);
   background: rgba(0,0,0,0.5);
   color: white;
