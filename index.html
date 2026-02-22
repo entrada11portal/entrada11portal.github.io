@@ -11,16 +11,16 @@ title: Home
 
   <div class="carousel-track" id="carouselTrack">
     {% for post in todos_posts limit:3 %}
-      <div class="carousel-slide">
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image }}" alt="{{ post.title }}">
-        </a>
-        <div class="carousel-title">
-          <p href="{{ post.url | relative_url }}">
-            {{ post.title }}
-          </p>
-        </div>
-      </div>
+    <div class="carousel-slide">
+       <a href="{{ post.url | relative_url }}" class="carousel-link">
+         <div class="carousel-image-wrapper">
+           <img src="{{ post.image }}" alt="{{ post.title }}">
+         </div>
+         <div class="carousel-title">
+           {{ post.title }}
+         </div>
+       </a>
+    </div>
     {% endfor %}
   </div>
 
