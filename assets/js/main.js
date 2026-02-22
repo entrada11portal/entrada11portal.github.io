@@ -51,3 +51,32 @@ setInterval(() => {
   if (slideIndex >= totalSlides) slideIndex = 0;
   atualizarSlide();
 }, 5000); // troca a cada 5 segundos
+
+// ============================ CARROSSEL POST =========================================== //
+
+let slideIndexRelacionados = 0;
+const trackRelacionados = document.getElementById("carouselRelacionados");
+const slidesRelacionados = document.querySelectorAll("#carouselRelacionados .carousel-slide");
+const indicatorsRelacionados = document.querySelectorAll(".relacionados-carousel .indicator");
+
+function atualizarRelacionados() {
+  trackRelacionados.style.transform = "translate3d(-" + (slideIndexRelacionados * 100) + "%, 0, 0)";
+  
+  indicatorsRelacionados.forEach((indicator, index) => {
+    indicator.classList.toggle("active", index === slideIndexRelacionados);
+  });
+}
+
+function moverSlideRelacionados(direcao) {
+  slideIndexRelacionados += direcao;
+
+  if (slideIndexRelacionados >= slidesRelacionados.length) slideIndexRelacionados = 0;
+  if (slideIndexRelacionados < 0) slideIndexRelacionados = slidesRelacionados.length - 1;
+
+  atualizarRelacionados();
+}
+
+function irParaSlideRelacionados(index) {
+  slideIndexRelacionados = index;
+  atualizarRelacionados();
+}
