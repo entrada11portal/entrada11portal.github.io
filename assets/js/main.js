@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(containerSelector);
     if (!carousel) return;
 
-    const track = carousel.querySelector(trackSelector);
+    const track = document.querySelector(trackSelector);
     const slides = track.children;
     const indicadores = carousel.querySelectorAll(".indicator");
 
