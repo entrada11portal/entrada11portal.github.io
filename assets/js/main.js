@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ========================= CARROSSEL ============================== */
 
-document.addEventListener("DOMContentLoaded", function () {
-
   function iniciarCarousel(containerSelector, trackSelector) {
 
     const carousel = document.querySelector(containerSelector);
