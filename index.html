@@ -7,34 +7,7 @@ title: Home
 
 <!-- ================= CARROSSEL ================== -->
 
-<div class="carousel home-carousel">
 
-  <div class="carousel-track" id="carouselTrack">
-    {% for post in todos_posts limit:5 %}
-    <div class="carousel-slide">
-       <a href="{{ post.url | relative_url }}" class="carousel-link">
-         <div class="carousel-image-wrapper">
-           <img src="{{ post.image }}" alt="{{ post.title }}">
-         </div>
-         <div class="carousel-title">
-           {{ post.title }}
-         </div>
-       </a>
-    </div>
-    {% endfor %}
-  </div>
-
-  <button class="carousel-btn prev" onclick="moverSlide(-1)">❮</button>
-  <button class="carousel-btn next" onclick="moverSlide(1)">❯</button>
-
-  <div class="carousel-indicators" id="carouselIndicators">
-    {% for post in todos_posts limit:5 %}
-      <span class="indicator {% if forloop.first %}active{% endif %}"
-            onclick="irParaSlide({{ forloop.index0 }})"></span>
-    {% endfor %}
-  </div>
-
-</div>
 
 <!-- ================= LISTA ABAIXO ================= -->
 
