@@ -160,6 +160,4 @@ document.addEventListener("DOMContentLoaded", function () {
   if (relacionadosCarousel) {
     window.moverSlideRelacionados = relacionadosCarousel.mover;
     window.irParaSlideRelacionados = relacionadosCarousel.irPara;
-  }
-
-});
+  };
