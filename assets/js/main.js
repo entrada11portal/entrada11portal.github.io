@@ -79,3 +79,4 @@ document.addEventListener("DOMContentLoaded", function () {
   iniciarCarousel(".relacionados-carousel", "#carouselRelacionados");
 
 });
+document.querySelector(".relacionados-carousel")
