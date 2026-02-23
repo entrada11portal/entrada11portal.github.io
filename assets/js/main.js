@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ========================= CARROSSEL ============================== */
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".custom-carousel").forEach(carousel => {
 
@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let current = 0;
     const total = slides.length;
 
+    if (total === 0) return;
+
     function updateCarousel() {
       track.style.transform = `translateX(-${current * 100}%)`;
 
@@ -43,9 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
         i.classList.remove("active")
       );
 
-      if (carousel.querySelectorAll(".indicator")[current]) {
-        carousel.querySelectorAll(".indicator")[current].classList.add("active");
-      }
+      const activeIndicator = carousel.querySelectorAll(".indicator")[current];
+      if (activeIndicator) activeIndicator.classList.add("active");
     }
 
     function createIndicators() {
@@ -53,10 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const dot = document.createElement("span");
         dot.classList.add("indicator");
         if (index === 0) dot.classList.add("active");
+
         dot.addEventListener("click", () => {
           current = index;
           updateCarousel();
         });
+
         indicatorsContainer.appendChild(dot);
       });
     }
@@ -80,4 +83,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-  
