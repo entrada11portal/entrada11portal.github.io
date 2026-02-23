@@ -93,11 +93,5 @@ layout: default
   <button class="carousel-btn prev" onclick="moverSlideRelacionados(-1)">❮</button>
   <button class="carousel-btn next" onclick="moverSlideRelacionados(1)">❯</button>
 
-  <div class="carousel-indicators">
-    {% for post in relacionados %}
-      <span class="indicator {% if forloop.first %}active{% endif %}"
-            onclick="irParaSlideRelacionados({{ forloop.index0 }})"></span>
-    {% endfor %}
-  </div>
 </div>
 </main>
