@@ -29,35 +29,11 @@ layout: default
 
 <!-- ==================== CARROSSEL POST ========================== -->
 
-<div class="custom-carousel">
+{% assign relacionados = site.posts 
+   | where_exp: "post", "post.url != page.url" %}
 
-  <div class="carousel-wrapper">
+{% assign relacionados = relacionados | sort: "date" | reverse | slice: 0,5 %}
 
-    <div class="carousel-track">
-
-      <!-- Slides aqui -->
-      <div class="carousel-slide">
-        <img src="imagem.jpg" alt="">
-      </div>
-
-    </div>
-
-    <!-- Botões laterais -->
-    <button class="carousel-btn prev">❮</button>
-    <button class="carousel-btn next">❯</button>
-
-    <!-- Indicadores -->
-    <div class="carousel-indicators">
-      <span class="indicator active"></span>
-      <span class="indicator"></span>
-    </div>
-
-  </div>
-
-  <!-- Título sempre fora da área da imagem -->
-  <div class="carousel-title">
-    Título do artigo aqui
-  </div>
-
-</div>
+{% include carousel.html posts=relacionados %}
+  
 </main>
