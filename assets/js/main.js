@@ -14,57 +14,21 @@ links.forEach(link => {
     });
 });
 
-// ============================ CARROSSEL HOME =========================================== //
+// ============================ CARROSSEL RELACIONADOS ============================
 
-let slideIndex = 0;
-let slides = document.querySelectorAll(".carousel-slide");
-let indicators = document.querySelectorAll(".indicator");
-let totalSlides = slides.length;
+document.addEventListener("DOMContentLoaded", function () {
 
-function atualizarSlide() {
-  const track = document.getElementById("carouselTrack");
-  track.style.transform = `translateX(-${slideIndex * 100}%)`;
+  const carousel = document.querySelector(".relacionados-carousel");
+  if (!carousel) return;
 
-  indicators.forEach(ind => ind.classList.remove("active"));
-  if (indicators[slideIndex]) {
-    indicators[slideIndex].classList.add("active");
-  }
-}
-
-function moverSlide(direcao) {
-  slideIndex += direcao;
-
-  if (slideIndex < 0) slideIndex = totalSlides - 1;
-  if (slideIndex >= totalSlides) slideIndex = 0;
-
-  atualizarSlide();
-}
-
-function irParaSlide(index) {
-  slideIndex = index;
-  atualizarSlide();
-}
-
-/* AUTOPLAY */
-/*setInterval(() => {
-  slideIndex++;
-  if (slideIndex >= totalSlides) slideIndex = 0;
-  atualizarSlide();
-}, 5000); // troca a cada 5 segundos
-
-// ============================ CARROSSEL POST =========================================== //
-
-const track = document.getElementById("carouselTrack");
-
-if (track) {
+  const track = carousel.querySelector("#carouselRelacionados");
+  const slides = track.children;
+  const indicadores = carousel.querySelectorAll(".indicator");
 
   let slideAtual = 0;
-  const slides = track.children;
   const totalSlides = slides.length;
-  const indicadores =
-    document.querySelectorAll(".carousel:not(.relacionados-carousel) .indicator");
 
-  function atualizarSlide() {
+  function atualizarSlideRelacionados() {
     track.style.transform =
       `translate3d(-${slideAtual * 100}%, 0, 0)`;
 
@@ -77,30 +41,29 @@ if (track) {
     }
   }
 
-  function moverSlide(direcao) {
+  function moverSlideRelacionados(direcao) {
     slideAtual += direcao;
 
     if (slideAtual >= totalSlides) slideAtual = 0;
     if (slideAtual < 0) slideAtual = totalSlides - 1;
 
-    atualizarSlide();
+    atualizarSlideRelacionados();
   }
 
-  function irParaSlide(index) {
+  function irParaSlideRelacionados(index) {
     slideAtual = index;
-    atualizarSlide();
+    atualizarSlideRelacionados();
   }
 
   setInterval(() => {
-    moverSlide(1);
+    moverSlideRelacionados(1);
   }, 5000);
 
-  window.moverSlide = moverSlide;
-  window.irParaSlide = irParaSlide;
-}
-*/
+  // Tornar acessível ao HTML
+  window.moverSlideRelacionados = moverSlideRelacionados;
+  window.irParaSlideRelacionados = irParaSlideRelacionados;
 
-document.addEventListener("DOMContentLoaded", function () {
+});
 
   /* ==================== MENU LATERAL ================================= */
 
