@@ -368,14 +368,18 @@ main {
 
 /* Indicadores SOBRE A IMAGEM */
 
+.carousel-image-wrapper {
+  position: relative;
+}
+
 .carousel-indicators {
   position: absolute;
-  bottom: 50px;
+  bottom: 12px; /* agora relativo à imagem */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
-  z-index: 10; /* ESSENCIAL */
+  z-index: 10;
 }
 
 .indicator {
