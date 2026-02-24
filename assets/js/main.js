@@ -1,28 +1,22 @@
 /* ========================= MENU LATERAL ============================== */
 
-/* ========================= MENU LATERAL ============================== */
-
 document.addEventListener("DOMContentLoaded", function() {
 
   const menuIcon = document.querySelector(".menu-icon");
-  const menu = document.querySelector(".menu");
+  const sideMenu = document.getElementById("sideMenu");
+  const closeBtn = document.querySelector(".close-btn");
 
-  if (menuIcon && menu) {
+  if (menuIcon && sideMenu) {
     menuIcon.addEventListener("click", function() {
-      menu.classList.toggle("active");
+      sideMenu.classList.add("active");
     });
   }
 
-  function openMenu() {
-    document.getElementById("sideMenu")?.classList.add("active");
+  if (closeBtn && sideMenu) {
+    closeBtn.addEventListener("click", function() {
+      sideMenu.classList.remove("active");
+    });
   }
-
-  function closeMenu() {
-    document.getElementById("sideMenu")?.classList.remove("active");
-  }
-
-  window.openMenu = openMenu;
-  window.closeMenu = closeMenu;
 
   const links = document.querySelectorAll(".menu-links a");
 
@@ -30,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function() {
     link.addEventListener("click", function () {
       links.forEach(l => l.classList.remove("active"));
       this.classList.add("active");
+
+      // Fecha o menu ao clicar no link (opcional)
+      sideMenu.classList.remove("active");
     });
   });
 
 });
 
-/* ========================= CARROSSEL ============================== */
-
 
 /* ========================= CARROSSEL ============================== */
-
