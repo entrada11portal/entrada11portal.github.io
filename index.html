@@ -7,10 +7,9 @@ title: Home
 
 <!-- ==================== CARROSSEL POST ========================== -->
 
-{% assign relacionados = site.posts 
-   | where_exp: "post", "post.url != page.url" %}
+<!-- {% for post in site.posts limit:5 %}
 
-{% assign relacionados = relacionados | sort: "date" | reverse | slice: 0,5 %}
+{% endfor %} -->
 
 {% include carousel.html posts=relacionados %}
 
@@ -21,7 +20,7 @@ title: Home
 
     <div class="linha-divisoria"></div>
    
-  {% for post in todos_posts offset:3 limit:8 %}
+  {% for post in todos_posts offset:5 limit:8 %}
    
     <article class="noticia-item">
        
