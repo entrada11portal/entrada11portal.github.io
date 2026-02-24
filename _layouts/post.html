@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<main>
-
 <div class="autor">{{ page.author }}</div>
 <div class="data">
   {{ page.date | date: "%d/%m/%Y - %H:%M" }}
@@ -35,5 +33,3 @@ layout: default
 {% assign relacionados = relacionados | sort: "date" | reverse | slice: 0,5 %}
 
 {% include carousel.html posts=relacionados %}
-  
-</main>
