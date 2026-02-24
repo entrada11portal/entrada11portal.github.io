@@ -1,7 +1,7 @@
 .custom-carousel {
   width: 100%;
   max-width: 1200px;
-  margin: 80px auto 40px auto;
+  margin: 0 auto 30vh auto;
   
 }
 
@@ -38,7 +38,6 @@
   color: black;
   padding: 10px;
   margin-top: 10px;
-  margin-bottom: 30vh;
   font-size: 1.3rem;
   font-weight: 600;
 }
