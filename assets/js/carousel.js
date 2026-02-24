@@ -7,11 +7,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const indicatorsContainer = carousel.querySelector(".carousel-indicators");
     const prevBtn = carousel.querySelector(".prev");
     const nextBtn = carousel.querySelector(".next");
+    const titleContainer = carousel.querySelector(".carousel-title");
 
     let current = 0;
     const total = slides.length;
 
     if (total === 0) return;
+
+    // Pega os títulos diretamente dos links
+    const titles = Array.from(slides).map(slide => {
+      return slide.querySelector("img").alt;
+    });
 
     function updateCarousel() {
       track.style.transform = `translateX(-${current * 100}%)`;
@@ -22,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const activeIndicator = carousel.querySelectorAll(".indicator")[current];
       if (activeIndicator) activeIndicator.classList.add("active");
+
+      // Atualiza o título
+      titleContainer.textContent = titles[current];
     }
 
     function createIndicators() {
@@ -53,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     prevBtn.addEventListener("click", prevSlide);
 
     createIndicators();
+    updateCarousel();
     setInterval(nextSlide, 5000);
 
   });
