@@ -7,7 +7,7 @@
       {% for post in include.posts %}
       <div class="carousel-slide">
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image }}" alt="TESTE DE TITULO">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
         </a>
       </div>
       {% endfor %}
