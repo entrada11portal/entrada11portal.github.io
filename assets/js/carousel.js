@@ -1,78 +1,70 @@
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-  document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".custom-carousel").forEach(carousel => {
 
-    const carousels = document.querySelectorAll(".custom-carousel");
-    if (!carousels.length) return;
+    const track = carousel.querySelector(".carousel-track");
+    const slides = carousel.querySelectorAll(".carousel-slide");
+    const indicatorsContainer = carousel.querySelector(".carousel-indicators");
+    const prevBtn = carousel.querySelector(".prev");
+    const nextBtn = carousel.querySelector(".next");
+    const titleContainer = carousel.querySelector(".carousel-title");
 
-    carousels.forEach(carousel => {
+    let current = 0;
+    const total = slides.length;
 
-      const track = carousel.querySelector(".carousel-track");
-      const slides = carousel.querySelectorAll(".carousel-slide");
-      const indicatorsContainer = carousel.querySelector(".carousel-indicators");
-      const prevBtn = carousel.querySelector(".prev");
-      const nextBtn = carousel.querySelector(".next");
-      const titleContainer = carousel.querySelector(".carousel-title");
+    if (total === 0) return;
 
-      if (!track || !slides.length) return;
+    // Pega os títulos diretamente dos links
+    const titles = Array.from(slides).map(slide => {
+      return slide.querySelector("img").alt;
+    });
 
-      let currentIndex = 0;
-      const total = slides.length;
+    function updateCarousel() {
+      track.style.transform = `translateX(-${current * 100}%)`;
 
-      const titles = Array.from(slides).map(slide =>
-        slide.querySelector("img")?.alt || ""
+      carousel.querySelectorAll(".indicator").forEach(i =>
+        i.classList.remove("active")
       );
 
-      function updateCarousel() {
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      const activeIndicator = carousel.querySelectorAll(".indicator")[current];
+      if (activeIndicator) activeIndicator.classList.add("active");
 
-        const indicators = carousel.querySelectorAll(".indicator");
-        indicators.forEach(i => i.classList.remove("active"));
-        if (indicators[currentIndex]) {
-          indicators[currentIndex].classList.add("active");
-        }
+      // Atualiza o título
+      titleContainer.textContent = titles[current];
+    }
 
-        if (titleContainer) {
-          titleContainer.textContent = titles[currentIndex];
-        }
-      }
+    function createIndicators() {
+      slides.forEach((_, index) => {
+        const dot = document.createElement("span");
+        dot.classList.add("indicator");
+        if (index === 0) dot.classList.add("active");
 
-      function createIndicators() {
-        if (!indicatorsContainer) return;
-
-        slides.forEach((_, index) => {
-          const dot = document.createElement("span");
-          dot.classList.add("indicator");
-          if (index === 0) dot.classList.add("active");
-
-          dot.addEventListener("click", () => {
-            currentIndex = index;
-            updateCarousel();
-          });
-
-          indicatorsContainer.appendChild(dot);
+        dot.addEventListener("click", () => {
+          current = index;
+          updateCarousel();
         });
-      }
 
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % total;
-        updateCarousel();
-      }
+        indicatorsContainer.appendChild(dot);
+      });
+    }
 
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + total) % total;
-        updateCarousel();
-      }
-
-      if (nextBtn) nextBtn.addEventListener("click", nextSlide);
-      if (prevBtn) prevBtn.addEventListener("click", prevSlide);
-
-      createIndicators();
+    function nextSlide() {
+      current = (current + 1) % total;
       updateCarousel();
-      setInterval(nextSlide, 5000);
+    }
 
-    });
+    function prevSlide() {
+      current = (current - 1 + total) % total;
+      updateCarousel();
+    }
+
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
+    createIndicators();
+    updateCarousel();
+    setInterval(nextSlide, 5000);
 
   });
 
-})();
+});
