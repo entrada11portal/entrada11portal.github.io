@@ -30,16 +30,10 @@
 }
 
 /* Título sobre a imagem */
-.carousel-caption {
-  position: absolute;
-  bottom: 40px;
-  left: 20px;
-  right: 20px;
-  color: white;
+.carousel-title {
+  margin-top: 12px;
   font-size: 1.3rem;
   font-weight: 600;
-  background: rgba(0,0,0,0.5);
-  padding: 10px;
 }
 
 /* Botões laterais */
