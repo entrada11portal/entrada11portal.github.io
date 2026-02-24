@@ -2,6 +2,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ========================= MENU LATERAL ============================== */
 
+document.addEventListener("DOMContentLoaded", function() {
+
+  const menuIcon = document.querySelector(".menu-icon");
+  const menu = document.querySelector(".menu");
+
+  if (menuIcon && menu) {
+    menuIcon.addEventListener("click", function() {
+      menu.classList.toggle("active");
+    });
+  }
+
+});
+
+
+
+  
   function openMenu() {
     document.getElementById("sideMenu")?.classList.add("active");
   }
