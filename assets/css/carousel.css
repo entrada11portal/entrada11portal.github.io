@@ -32,7 +32,7 @@
 
 /* Título sobre a imagem */
 .carousel-title {
-  position: relative;
+  position: absolute;
   color: black;
   padding: 10px;
   font-size: 1.3rem;
