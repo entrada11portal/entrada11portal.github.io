@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-
 /* ========================= MENU LATERAL ============================== */
 
 document.addEventListener("DOMContentLoaded", function() {
