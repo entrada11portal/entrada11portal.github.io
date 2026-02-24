@@ -1,0 +1,27 @@
+<div class="custom-carousel">
+
+  <div class="carousel-wrapper">
+
+    <div class="carousel-track">
+
+      {% for post in include.posts %}
+      <div class="carousel-slide">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <!-- Botões laterais -->
+    <button class="carousel-btn prev">❮</button>
+    <button class="carousel-btn next">❯</button>
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators"></div> 
+    
+  </div>
+  
+    <div class="carousel-title">{{ post.title }}</div> 
+</div>
