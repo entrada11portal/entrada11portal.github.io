@@ -21,9 +21,9 @@ title: Home
 
   {% for post in todos_posts offset:3 limit:8 %}
 
+    <div class="linha-divisoria"></div>
+   
     <article class="noticia-item">
-
-      <div class="linha-divisoria"></div>
        
       <div class="noticia-imagem">
         <a href="{{ post.url | relative_url }}">
