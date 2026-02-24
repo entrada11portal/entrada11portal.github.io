@@ -5,8 +5,14 @@ title: Home
 
 {% assign todos_posts = site.posts %}
 
-<!-- ================= CARROSSEL ================== -->
+<!-- ==================== CARROSSEL POST ========================== -->
 
+{% assign relacionados = site.posts 
+   | where_exp: "post", "post.url != page.url" %}
+
+{% assign relacionados = relacionados | sort: "date" | reverse | slice: 0,5 %}
+
+{% include carousel.html posts=relacionados %}
 
 
 <!-- ================= LISTA ABAIXO ================= -->
