@@ -1,3 +1,5 @@
+console.log("CARROSSEL JS CARREGOU");
+
 document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".custom-carousel").forEach(carousel => {
