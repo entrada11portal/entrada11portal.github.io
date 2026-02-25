@@ -7,11 +7,7 @@ title: Home
 
 <!-- ==================== CARROSSEL POST ========================== -->
 
-{% assign relacionados = site.posts 
-   | where_exp: "post", "post.url != page.url" %}
-
-{% assign relacionados = relacionados | sort: "date" | reverse | slice: 0,5 %}
-
+{% assign relacionados = site.posts | slice: 0, 5 %}
 {% include carousel.html posts=relacionados %}
 
 
