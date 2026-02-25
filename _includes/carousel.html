@@ -10,10 +10,9 @@
           <img src="{{ post.image }}" alt="{{ post.title }}">
         </a>
       </div>
-  <a href="{{ post.url | relative_url }}">
-    {{ post.title }}
-  </a>
-</div>
+      <div>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </div>
       {% endfor %}
 
     </div>
