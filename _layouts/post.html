@@ -33,3 +33,39 @@ layout: default
 {% assign relacionados = relacionados | sort: "date" | reverse | slice: 0,5 %}
 
 {% include carousel.html posts=relacionados %} -->
+
+{% assign relacionados = "" | split: "" %}
+
+{% for post in site.posts %}
+  {% if post.url != page.url and post.tags %}
+    {% for tag in post.tags %}
+      {% if page.tags contains tag %}
+        {% assign relacionados = relacionados | push: post %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% assign relacionados = relacionados | sort: "date" | reverse %}
+
+{% if relacionados.size < 5 %}
+  {% assign faltando = 5 | minus: relacionados.size %}
+  {% assign recentes = site.posts
+     | where_exp: "post", "post.url != page.url"
+     | sort: "date"
+     | reverse %}
+
+  {% for post in recentes %}
+    {% unless relacionados contains post %}
+      {% assign relacionados = relacionados | push: post %}
+    {% endunless %}
+    {% if relacionados.size == 5 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign relacionados = relacionados | slice: 0,5 %}
+
+{% include carousel.html posts=relacionados %}
