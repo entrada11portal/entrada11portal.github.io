@@ -27,13 +27,6 @@ layout: default
 
 <!-- ==================== CARROSSEL POST ========================== -->
 
-<!-- {% assign relacionados = site.posts 
-   | where_exp: "post", "post.url != page.url" %}
-
-{% assign relacionados = relacionados | sort: "date" | reverse | slice: 0,5 %}
-
-{% include carousel.html posts=relacionados %} -->
-
 {% assign relacionados = "" | split: "" %}
 
 {% for post in site.posts %}
