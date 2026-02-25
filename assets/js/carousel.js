@@ -14,9 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (total === 0) return;
 
-    // Pega os títulos diretamente dos links
+    /* Pega os títulos diretamente dos links
     const titles = Array.from(slides).map(slide => {
       return slide.querySelector("img").alt;
+    });*/
+
+    const postsData = Array.from(slides).map(slide => {
+      const link = slide.querySelector("a");
+      const img = slide.querySelector("img");
+
+      return {
+        title: img.alt,
+        url: link.href
+      };
     });
 
     function updateCarousel() {
