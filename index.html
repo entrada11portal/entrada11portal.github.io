@@ -8,7 +8,8 @@ title: Home
 <!-- ==================== CARROSSEL POST ========================== -->
 
 {% for post in site.posts limit:5 %}
-
+     {% assign latest_posts = site.posts | slice: 0, 5 %}
+     {% for post in latest_posts %}
 {% endfor %}
 
 {% include carousel.html posts=relacionados %}
