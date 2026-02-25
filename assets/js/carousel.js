@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = carousel.querySelector(".prev");
     const nextBtn = carousel.querySelector(".next");
     const titleContainer = carousel.querySelector(".carousel-title");
+    document.getElementById("carousel-title").textContent = post.title;
+    document.getElementById("carousel-title").href = post.url;
 
     let current = 0;
     const total = slides.length;
