@@ -15,11 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (total === 0) return;
 
-    /* Pega os títulos diretamente dos links
-    const titles = Array.from(slides).map(slide => {
-      return slide.querySelector("img").alt;
-    });*/
-
     const postsData = Array.from(slides).map(slide => {
       const link = slide.querySelector("a");
       const img = slide.querySelector("img");
@@ -41,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (activeIndicator) activeIndicator.classList.add("active");
 
       // Atualiza o título
-      /*titleContainer.textContent = titles[current];*/
       const titleLink = titleContainer.querySelector(".carousel-title-link");
 
       titleLink.textContent = postsData[current].title;
