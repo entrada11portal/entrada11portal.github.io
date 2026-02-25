@@ -5,7 +5,7 @@ subtitle: "Subtítulo da matéria"
 date: 2026-02-21
 author: "Redação"
 categories: entretenimento
-tags: [politica]
+tags: [comida]
 image: https://harus.ind.br/wp-content/uploads/2023/02/5-praias-brasileiras-1024x768.jpg
 image_description: "Imagem ilustrativa"
 ---
