@@ -10,10 +10,6 @@
           <img src="{{ post.image }}" alt="{{ post.title }}">
         </a>
       </div>
-      <a href="{{ post.url | relative_url }}">
-          <div class="carousel-title">{{ post.title }}</div>
-      </a>
-      <div class="carousel-title">
   <a href="{{ post.url | relative_url }}">
     {{ post.title }}
   </a>
@@ -31,7 +27,6 @@
 
   </div>
 
-  
-          <div class="carousel-title">{{ post.url | relative_url }}</div>
+          <div class="carousel-title">{{ post.title }}</div>
   
 </div>
