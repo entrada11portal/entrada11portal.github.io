@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = carousel.querySelector(".prev");
     const nextBtn = carousel.querySelector(".next");
     const titleContainer = carousel.querySelector(".carousel-title");
+    
 
     let current = 0;
     const total = slides.length;
@@ -40,7 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (activeIndicator) activeIndicator.classList.add("active");
 
       // Atualiza o título
-      titleContainer.textContent = titles[current];
+      /*titleContainer.textContent = titles[current];*/
+      const titleLink = titleContainer.querySelector(".carousel-title-link");
+
+      titleLink.textContent = postsData[current].title;
+      titleLink.href = postsData[current].url;
     }
 
     function createIndicators() {
