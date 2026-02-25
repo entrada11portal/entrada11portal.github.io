@@ -7,10 +7,10 @@ title: Home
 
 <!-- ==================== CARROSSEL POST ========================== -->
 
-{% for post in site.posts limit:5 %}
-     {% assign latest_posts = site.posts | slice: 0, 5 %}
-     {% for post in latest_posts %}
-{% endfor %}
+{% assign relacionados = site.posts 
+   | where_exp: "post", "post.url != page.url" %}
+
+{% assign relacionados = relacionados | sort: "date" | reverse | slice: 0,5 %}
 
 {% include carousel.html posts=relacionados %}
 
