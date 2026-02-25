@@ -2,19 +2,19 @@
 
   <div class="carousel-wrapper">
 
-   
+   <div class="carousel-track">
 
       {% for post in include.posts %}
-      <div class="carousel-track">
+      
         <div class="carousel-slide">
           <a href="{{ post.url | relative_url }}">
             <img src="{{ post.image }}" alt="{{ post.title }}">
           </a>
         </div>
-      </div>
-      <div class="carousel-title">{{ post.title }}</div>
+     
       {% endfor %}
-
+     
+     </div>
  
 
     <!-- Botões laterais -->
@@ -26,6 +26,6 @@
 
   </div>
 
-         <!-- <div class="carousel-title">{{ post.title }}</div> -->
+         <<div class="carousel-title">{{ post.title }}</div>
   
 </div>
