@@ -33,8 +33,10 @@ header {
 
 .notification {
     position: absolute;
-    right: 20 px;
+    right: 5vw;
     cursor: pointer;
+    display: flex;
+    gap: 3vw;
 }
 
 .notification svg {
@@ -43,14 +45,6 @@ header {
     stroke: white;
     stroke-width: 3;
     fill: none;
-}
-
-.sininho{
-
-}
-
-.pesquisa{
-
 }
 
 .menu-icon {
