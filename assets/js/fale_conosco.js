@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     botao.textContent = "Enviando...";
 
     emailjs.sendForm(
-      "trebew2@gmail.com",
+      "entrada11portal",
       "template_fl418xf",
       this
     ).then(function () {
