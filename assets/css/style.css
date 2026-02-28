@@ -31,23 +31,6 @@ header {
     font-size: 25px;
 }
 
-.notification {
-    position: absolute;
-    right: 5vw;
-    cursor: pointer;
-    display: flex;
-    gap: 3vw;
-}
-
-.pesquisa {
-    width: 26px;
-    height: 26px;
-    stroke: white;
-    stroke-width: 3;
-    fill: none;
-    cursor: pointer;
-}
-
 .menu-icon {
     position: absolute;
     left: 20px;
@@ -151,19 +134,31 @@ header {
     width: 100%;
 }
 
-/* ================= PESQUISA ================= */
+/* ================= PESQUISA E SININHO ================= */
 
-/* Ícone */
-.search-toggle svg {
-    width: 26px;
-    height: 26px;
-    fill: none;
+/* Ícones */
+.notification {
+    position: absolute;
+    right: 5vw;
+    cursor: pointer;
     stroke: white;
     stroke-width: 3;
-    cursor: pointer;
+    fill: none;
+    display: flex;
+    gap: 3vw;
 }
 
-/* Barra escondida */
+.pesquisa {
+    width: 26px;
+    height: 26px;
+}
+
+.sininho {
+    width: 26px;
+    height: 26px;
+}
+
+/* Barra escondida de pesquisa */
 .search-bar {
     position: fixed;
     top: -100px;
