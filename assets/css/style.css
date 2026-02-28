@@ -31,7 +31,7 @@ header {
     font-size: 25px;
 }
 
-/*.notification {
+.notification {
     position: absolute;
     right: 5vw;
     cursor: pointer;
@@ -39,14 +39,15 @@ header {
     gap: 3vw;
 }
 
-.notification svg {
+.pesquisa {
     width: 26px;
     height: 26px;
     stroke: white;
     stroke-width: 3;
     fill: none;
+    cursor: pointer;
 }
-*/
+
 .menu-icon {
     position: absolute;
     left: 20px;
