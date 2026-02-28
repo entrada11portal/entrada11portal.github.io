@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, this);
                 });
 
-                const results = idx.search(query);
+                const results = idx.search("*" + query + "*");
                 const resultsContainer = document.getElementById("results");
 
                 if (results.length === 0) {
