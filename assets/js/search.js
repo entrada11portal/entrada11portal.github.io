@@ -36,7 +36,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const toggle = document.querySelector(".search-toggle");
+    const toggle = document.querySelector(".pesquisa");
     const searchBar = document.querySelector(".search-bar");
     const closeBtn = document.querySelector(".search-close");
     const input = document.getElementById("searchInput");
