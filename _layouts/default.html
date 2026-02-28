@@ -16,6 +16,13 @@
 
   {% include header.html %}
 
+  <div class="search-bar">
+    <div class="search-container">
+        <input type="text" placeholder="Pesquisar notícias..." id="searchInput">
+        <button class="search-close">✕</button>
+    </div>
+  </div>
+  
   <main class="page-content">
     {{ content }}
   </main>
