@@ -31,7 +31,7 @@ header {
     font-size: 25px;
 }
 
-.notification {
+/*.notification {
     position: absolute;
     right: 5vw;
     cursor: pointer;
@@ -46,7 +46,7 @@ header {
     stroke-width: 3;
     fill: none;
 }
-
+*/
 .menu-icon {
     position: absolute;
     left: 20px;
@@ -154,8 +154,8 @@ header {
 
 /* Ícone */
 .search-toggle svg {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
