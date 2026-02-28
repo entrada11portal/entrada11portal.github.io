@@ -150,6 +150,61 @@ header {
     width: 100%;
 }
 
+/* ================= PESQUISA ================= */
+
+/* Ícone */
+.search-toggle svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    cursor: pointer;
+}
+
+/* Barra escondida */
+.search-bar {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: top 0.3s ease;
+    z-index: 9999;
+}
+
+/* Quando ativa */
+.search-bar.active {
+    top: 0;
+}
+
+/* Conteúdo interno */
+.search-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+.search-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
 /* ================= CONTEÚDO ================= */
 
 main {
