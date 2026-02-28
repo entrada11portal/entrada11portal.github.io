@@ -33,6 +33,7 @@ header {
 
 .notification {
     position: absolute;
+    right: 20 px;
     cursor: pointer;
 }
 
