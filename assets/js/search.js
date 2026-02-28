@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Redireciona ao pressionar Enter
         input.addEventListener("keypress", function(e) {
             if (e.key === "Enter") {
-                window.location.href = `/search.html?q=${input.value}`;
+                window.location.href = `/search/?q=${input.value}`;
             }
         });
     }
