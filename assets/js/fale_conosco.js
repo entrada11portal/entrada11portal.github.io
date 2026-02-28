@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  emailjs.init("SUA_PUBLIC_KEY_AQUI");
+  emailjs.init("q7LIcyo682s1Sk5Eo");
 
   const form = document.getElementById("formContato");
   if (!form) return;
