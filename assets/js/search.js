@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ===== Página de resultados =====
-    if (window.location.pathname.includes("search.html")) {
+    if (window.location.pathname.includes("/search")) {
 
         const params = new URLSearchParams(window.location.search);
         const query = params.get("q");
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, this);
                 });
 
-                const results = idx.search("*" + query + "*");
+                const results = idx.search(query + "*");
                 const resultsContainer = document.getElementById("results");
 
                 if (results.length === 0) {
