@@ -40,6 +40,15 @@
   <script src="{{ '/assets/js/fale_conosco.js' | relative_url }}"></script>
   <script src="https://unpkg.com/lunr/lunr.js"></script>
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "336a53b4-ada9-4fa0-bff5-6de122f46946",
+      });
+    });
+  </script>
   
 </body>
 </html>
