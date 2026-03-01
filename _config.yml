@@ -6,3 +6,4 @@ markdown: kramdown
 permalink: /:categories/:title/
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
