@@ -7,7 +7,7 @@ author: "Beto Medeiros"
 categories: curiosidades
 tags: [politica, economia, investimentos, teoria dos jogos, educação]
 image: /Imagens/Quem é o professor que está prevendo os eventos de 2026.png
-image_description: "Imagem ilustrativa"
+image_description: "Disponível em newsweek.com"
 ---
 
 <p>O professor Jiang Xueqin tem ganhado notoriedade na internet por conta de análises de cenários que levaram à previsões com boa margem de acerto. Formado na Universidade de Yale, atuou na área educacional nos Estados Unidos e na China. Atualmente tem se destacado quanto a aplicação da teoria dos jogos para explicação e planejamento de diversos cenários envolvendo geopolítica, economia e educação.</p>
