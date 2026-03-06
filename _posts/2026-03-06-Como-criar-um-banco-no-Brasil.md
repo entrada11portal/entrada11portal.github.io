@@ -3,7 +3,6 @@ layout: post
 title: "Como criar um banco no Brasil"
 subtitle: "O processo passa por análises de capacidade financeira, conhecimento sobre o ramo e plano de negócios"
 date: 2026-03-06
-hora: 18:38
 author: "Beto Medeiros"
 categories: curiosidades
 tags: [economia, investimentos, Banco Master, bancos]
