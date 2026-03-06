@@ -6,7 +6,7 @@ date: 2026-02-22
 author: "Val de Medeiros"
 categories: entretenimento
 tags: [comida, restaurantes, festival, brasília]
-image: https://harus.ind.br/wp-content/uploads/2023/02/5-praias-brasileiras-1024x768.jpg
+image: /Imagens/Jogos.png
 image_description: "Imagem ilustrativa"
 ---
 
