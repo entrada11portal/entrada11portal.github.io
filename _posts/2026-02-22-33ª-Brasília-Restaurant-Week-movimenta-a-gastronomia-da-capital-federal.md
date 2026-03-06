@@ -7,7 +7,7 @@ author: "Val de Medeiros"
 categories: entretenimento
 tags: [comida, restaurantes, festival, brasília]
 image: /Imagens/33ª Brasília Restaurant Week movimenta a gastronomia da capital federal.png
-image_description: "Imagem ilustrativa"
+image_description: "Imagem meramente ilustrativa"
 ---
 
 <p>A capital do Brasil est&aacute; com mais uma edi&ccedil;&atilde;o do famoso festival gastron&ocirc;mico Restaurant Week, que acontece de 6 de fevereiro a 8 de mar&ccedil;o de 2026 em Bras&iacute;lia, no Distrito Federal.<br />Esse evento transforma a cidade num grande circuito de sabores, reunindo mais de 150 restaurantes com menus especiais de tr&ecirc;s etapas (entrada, prato principal e sobremesa) a pre&ccedil;os fixos que variam, dependendo da categoria do menu, entre aproximadamente R$ 59,90 e R$ 149.<br />Nesta edi&ccedil;&atilde;o, o tema escolhido &eacute; &ldquo;A Cozinha dos Campe&otilde;es&rdquo;, inspirada na Copa do Mundo, com menus criados por chefs que remetem a sele&ccedil;&otilde;es e hist&oacute;rias marcantes da competi&ccedil;&atilde;o.</p>
