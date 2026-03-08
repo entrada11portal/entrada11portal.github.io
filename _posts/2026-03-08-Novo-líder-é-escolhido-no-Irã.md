@@ -4,7 +4,7 @@ title: "Novo líder é escolhido no Irã"
 subtitle: "Mojtaba Khamenei nasceu em Teerã sendo o segundo filho de Ali Khamenei, que governou o país como líder supremo até sua morte em 2026."
 date: 2026-03-08
 author: "Beto Medeiros"
-categories: notícias
+categories: noticias
 tags: [politica, economia, investimentos, guerra do Irã, guerra, petróleo]
 image: /imagens/2026/março/Novo líder é escolhido no Irã.png
 image_description: ""
