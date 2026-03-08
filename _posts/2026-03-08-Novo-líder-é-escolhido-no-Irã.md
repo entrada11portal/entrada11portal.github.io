@@ -6,8 +6,8 @@ date: 2026-03-08
 author: "Beto Medeiros"
 categories: notícias
 tags: [politica, economia, investimentos, guerra do Irã, guerra, petróleo]
-image: /imagens/2026/março/Novo líder é escolhido no Irã.png
-image_description: "Imagem gerada por IA"
+image: /imagens/2026/março/Novo líder é escolhido no Irã.avif
+image_description: ""
 ---
 
 <p>Mojtaba Khamenei nasceu em 1969, na cidade de Teerã, capital do Irã. Ele é o segundo filho de Ali Khamenei, que governou o país como líder supremo desde 1989 até sua morte em 2026. Criado em um ambiente profundamente religioso e político, Mojtaba seguiu carreira clerical dentro do islamismo xiita, alcançando o título religioso de hojatoleslam, um grau intermediário na hierarquia clerical iraniana. Apesar de não ocupar cargos oficiais importantes durante muitos anos, Mojtaba ganhou grande influência política nos bastidores do regime iraniano. Ele atuava frequentemente como intermediário entre seu pai e diversas instituições do Estado, especialmente o poderoso Corpo da Guarda Revolucionária Islâmica (IRGC), organização militar e política fundamental no sistema de poder do país.</p>
