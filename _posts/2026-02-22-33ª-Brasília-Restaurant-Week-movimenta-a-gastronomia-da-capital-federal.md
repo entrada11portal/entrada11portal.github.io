@@ -6,7 +6,7 @@ date: 2026-02-22
 author: "Val de Medeiros"
 categories: entretenimento
 tags: [comida, restaurantes, festival, brasília]
-image: /Imagens/33ª Brasília Restaurant Week movimenta a gastronomia da capital federal.png
+image: /imagens/2026/fevereiro/33ª Brasília Restaurant Week movimenta a gastronomia da capital federal.png
 image_description: "Imagem meramente ilustrativa"
 ---
 
