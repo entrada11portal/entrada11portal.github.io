@@ -6,7 +6,7 @@ date: 2026-03-08
 author: "Beto Medeiros"
 categories: notícias
 tags: [politica, economia, investimentos, guerra do Irã, guerra, petróleo]
-image: /imagens/2026/março/Novo líder é escolhido no Irã.avif
+image: /imagens/2026/março/Novo líder é escolhido no Irã.webp
 image_description: ""
 ---
 
