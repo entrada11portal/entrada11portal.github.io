@@ -6,7 +6,7 @@ date: 2026-03-06
 author: "Beto Medeiros"
 categories: curiosidades
 tags: [politica, economia, investimentos, teoria dos jogos, educação]
-image: /Imagens/Quem é o professor que está prevendo os eventos de 2026.png
+image: /imagens/2026/março/Quem é o professor que está prevendo os eventos de 2026.png
 image_description: "Disponível em newsweek.com"
 ---
 
