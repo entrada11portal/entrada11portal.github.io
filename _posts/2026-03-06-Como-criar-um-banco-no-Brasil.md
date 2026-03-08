@@ -7,7 +7,7 @@ author: "Beto Medeiros"
 categories: curiosidades
 tags: [economia, investimentos, Banco Master, bancos]
 image: /imagens/2026/março/Como criar um banco no Brasil.png
-image_description: "Direitos autorais: Marcos Santos Fotógrafo do site jornal.usp.br"
+image_description: "Imagem gerada por IA"
 ---
 
 <p>No Brasil, um banco é uma instituição financeira autorizada a captar recursos do público e conceder crédito, além de prestar diversos serviços financeiros. De acordo com a legislação do Sistema Financeiro Nacional, especialmente a Lei nº 4.595/1964, essas instituições são supervisionadas pelo Banco Central do Brasil e seguem diretrizes estabelecidas pelo Conselho Monetário Nacional. Para abrir um banco é necessário solicitar autorização prévia ao Banco Central, demonstrar capacidade financeira dos controladores, apresentar um plano de negócios detalhado e cumprir exigências de governança, gestão de riscos e compliance. Também é exigido capital mínimo elevado, além da comprovação de origem lícita dos recursos utilizados para a constituição da instituição.</p>
