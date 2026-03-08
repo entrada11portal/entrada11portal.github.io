@@ -6,7 +6,7 @@ date: 2026-03-08
 author: "Beto Medeiros"
 categories: curiosidades
 tags: [economia, investimentos, bancos, bitcoin, criptomoeda, stablecoins]
-image: /imagens/marco/Bitcoin entenda a moeda que não sofre inflação.png
+image: /imagens/2026/março/Bitcoin entenda a moeda que não sofre inflação.png
 image_description: "Imagem ilustrativa"
 ---
 
