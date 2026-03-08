@@ -6,7 +6,7 @@ date: 2026-03-06
 author: "Beto Medeiros"
 categories: curiosidades
 tags: [economia, investimentos, Banco Master, bancos]
-image: /Imagens/Como criar um banco no Brasil.jpg
+image: /imagens/2026/março/Como criar um banco no Brasil.png
 image_description: "Direitos autorais: Marcos Santos Fotógrafo do site jornal.usp.br"
 ---
 
