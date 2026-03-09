@@ -5,7 +5,7 @@ subtitle: "A Agência Internacional de Energia (AIE), criada no contexto da cris
 date: 2026-03-09
 author: "Beto Medeiros"
 categories: noticias
-tags: [petróleo, economia, investimentos, guerra no Irã]
+tags: [petróleo, economia, investimentos, guerra do Irã]
 image: /imagens/2026/março/AIE como uma das principais coordenadoras do esforço internacional no equilíbrio da crise energética.png
 image_description: "Imagem gerada por IA"
 ---
