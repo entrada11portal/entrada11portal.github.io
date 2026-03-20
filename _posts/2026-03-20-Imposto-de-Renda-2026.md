@@ -4,7 +4,7 @@ title: "Imposto de Renda 2026"
 subtitle: "Algumas novidades aparecerão ainda em 2026 como declaração de apostas e nome social"
 date: 2026-03-20
 author: "Beto Medeiros"
-categories: notícias
+categories: noticias
 tags: [imposto de renda, imposto de renda 2026, IR 2026, imposto de renda para quem ganha menos de 5000, imposto de renda para quem ganha mais de 5000, imposto de renda para professor, imposto de renda para PCD, imposto de renda para MEI, imposto de renda para BETs, imposto de renda apostas, IR BETS, IR apostas, IR apostas on line]
 image: /imagens/2026/março/Imposto de Renda 2026.png
 image_description: "Imagem gerada por IA"
