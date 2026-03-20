@@ -5,7 +5,7 @@ subtitle: "Quais são os cinco alimentos que se deve ter em casa em tempo de esc
 date: 2026-03-20
 author: "Beto Medeiros"
 categories: top_5
-tags: [comida, nutrição, Irã, guerra, inflação, desabastecimento, agricultura, conserva, sobrevivencialismo, petróleo, gasolina, diesel]
+tags: [comida, nutrição, Irã, guerra, inflação, desabastecimento, diesel desabastecimento, desabastecimento diesel, agricultura, conserva, sobrevivencialismo, petróleo, gasolina, diesel]
 image: /imagens/2026/março/5 conservas para se ter em casa em tempos escassez.png
 image_description: "Imagem gerada por IA"
 ---
