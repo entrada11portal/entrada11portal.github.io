@@ -5,7 +5,7 @@ subtitle: "O Brasil se destaca pelos potenciais produtivos por meio da agricultu
 date: 2026-03-20
 author: "Beto Medeiros"
 categories: top_5
-tags: [economia, petróleo, caminhoneiros, transporte, biodigestor, comida em conserva, capim-elefante, álcool caseiro]
+tags: [biogás, biogas, usina de biogas, biodiesel, usina de biodiesel, economia, petróleo, caminhoneiros, transporte, biodigestor, comida em conserva, capim-elefante, álcool caseiro]
 image: /imagens/2026/março/Como-se-proteger-da-crise-do-petróleo-5-estratégias-para-a-agroindústria.png
 image_description: "Imagem gerada por IA"
 ---
