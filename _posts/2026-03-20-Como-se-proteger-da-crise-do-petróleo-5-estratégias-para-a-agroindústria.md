@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Como se proteger da crise do petróleo: 5 estratégias para a agroindústria"
+title: "Desabastecimento de combustível: 5 estratégias para a agroindústria"
 subtitle: "O Brasil se destaca pelos potenciais produtivos por meio da agricultura e pecuária além da reciclagem de insumos."
 date: 2026-03-20
 author: "Beto Medeiros"
