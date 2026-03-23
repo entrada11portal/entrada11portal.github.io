@@ -6,7 +6,7 @@ date: 2026-03-22
 author: "Beto Medeiros"
 categories: curiosidades
 tags: [moeda alternativa, investimento alternativo, investimento no campo, renda rural, renda na roça, escambo, trocas de mercadorias, produção de álcool, produzir combustível, vender álcool na fazenda, vender combustível na fazenda, vender combustível no campo]
-image: /imagens/2026/março/.png
+image: /imagens/2026/março/Moedas alternativas no setor agropecuário.png
 image_description: "Imagem gerada por IA"
 ---
 
