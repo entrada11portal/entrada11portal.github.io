@@ -11,7 +11,7 @@ image_description: "Imagem gerada por IA"
 ---
 <p>A Sociedade de Crédito Direto (SCD) é um tipo de instituição financeira relativamente recente no Brasil, criada para modernizar e ampliar o acesso ao crédito por meio da tecnologia. Regulada pelo Banco Central e instituída pela Resolução nº 4.656/2018 do Conselho Monetário Nacional, a SCD é uma fintech autorizada a conceder empréstimos, financiamentos e adquirir direitos creditórios utilizando exclusivamente recursos próprios e operando de forma totalmente digital.</p><br>
 <h2>O que é e como funciona uma SCD</h2><br>
-<p>Na prática, a SCD funciona como uma instituição que empresta dinheiro diretamente ao cliente, sem intermediação de bancos tradicionais. Diferente dos bancos, ela não pode captar depósitos do público, operando apenas com capital próprio ou estruturas vinculadas a ele. Seu funcionamento é 100% digital: desde a análise de crédito até a assinatura de contratos ocorre por plataformas eletrônicas. Além de conceder crédito, ela pode realizar serviços como análise de crédito para terceiros, cobrança e emissão de moeda eletrônica.</p><br><br>
+<p>Na prática, a SCD funciona como uma instituição que empresta dinheiro diretamente ao cliente, sem intermediação de bancos tradicionais. Diferente dos bancos, ela não pode captar depósitos do público, operando apenas com capital próprio ou estruturas vinculadas a ele. Seu funcionamento é 100% digital: desde a análise de crédito até a assinatura de contratos ocorre por plataformas eletrônicas. Além de conceder crédito, ela pode realizar serviços como análise de crédito para terceiros, cobrança e emissão de moeda eletrônica.</p><br>
 <h2>Vantagens em relação a outros modelos de empresa</h2><br>
 <p>Comparada a bancos tradicionais ou até franquias, a SCD apresenta algumas vantagens relevantes:</p><br>
 <ul style="margin-left: 5vw;">
@@ -20,7 +20,7 @@ image_description: "Imagem gerada por IA"
 <li>Custos estruturais mais baixos, já que opera digitalmente;</li>
 <li>Escalabilidade: pode crescer rapidamente com tecnologia;</li>
 <li>Regulação mais simples que a de bancos múltiplos, embora ainda rigorosa.</li>
-c
+</ul>
 <p>Em relação a franquias, a diferença é ainda maior: a SCD não depende de marca licenciada nem de padronização comercial, sendo um negócio próprio com alto potencial financeiro — porém também com maior risco e exigência técnica.
 <h2>Origem do capital e investimento inicial</h2><br>
 <p>Um ponto fundamental: a SCD só pode operar com capital próprio, não podendo captar dinheiro de clientes como os bancos fazem. As principais fontes de capital são:</p><br>
