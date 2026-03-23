@@ -20,7 +20,7 @@ image_description: "Imagem gerada por IA"
 
 <p>Comparada a bancos tradicionais ou até franquias, a SCD apresenta algumas vantagens relevantes:</p><br>
 
-<ul style="margin-left: 2vw;">
+<ul style="margin-left: 5vw;">
 <li>Menor burocracia operacional: não há necessidade de agências físicas;</li>
 <li>Maior agilidade na concessão de crédito;</li>
 <li>Custos estruturais mais baixos, já que opera digitalmente;</li>
@@ -33,7 +33,7 @@ image_description: "Imagem gerada por IA"
 <h2>Origem do capital e investimento inicial</h2><br>
 
 <p>Um ponto fundamental: a SCD só pode operar com capital próprio, não podendo captar dinheiro de clientes como os bancos fazem. As principais fontes de capital são:</p><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Recursos próprios dos sócios;</li>
 <li>Investidores privados;</li>
 <li>Fundos de investimento;</li>
@@ -41,13 +41,13 @@ image_description: "Imagem gerada por IA"
 <li>Emissão de títulos (como CRIs e CRAs).</li>
 </ul>
 <h2>Quanto ao investimento inicial:</h2><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>O capital mínimo exigido é de cerca de R$ 1 milhão integralizado;</li>
 <li>Na prática, operações viáveis costumam exigir milhões adicionais para estrutura tecnológica, equipe, compliance e carteira de crédito.</li>
 <li>Burocracia e processo de abertura.</li>
 </ul>
 <h2>Abrir uma SCD não é simples. O processo envolve:</h2><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Constituição da empresa;</li>
 <li>Elaboração de plano de negócios detalhado;</li>
 <li>Estrutura de governança e gestão de riscos;</li>
@@ -60,7 +60,7 @@ image_description: "Imagem gerada por IA"
 <h2>É necessário contador ou advogado?</h2><br>
 
 <p>Sim — na prática, é indispensável contar com profissionais especializados:</p><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Contador: para estrutura societária, regime tributário e controles financeiros;</li>
 <li>Advogado (especialmente bancário/regulatório): para lidar com o Banco Central, contratos e compliance;</li>
 </ul>
@@ -69,7 +69,7 @@ image_description: "Imagem gerada por IA"
 <h2>Sociedade entre sócios</h2><br>
 
 <p>Uma SCD pode ser constituída por mais de uma pessoa, inclusive com investidores. Nesse caso:</p><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Os sócios passam por análise do Banco Central;</li>
 <li>É necessário comprovar capacidade financeira e reputação;</li>
 <li>Pode haver participação de fundos ou empresas;</li>
@@ -79,14 +79,14 @@ image_description: "Imagem gerada por IA"
 <h2>Legislação e regulamentação</h2><br>
 
 <p>A principal base legal é a Resolução nº 4.656/2018, que:</p><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Define o que a SCD pode ou não fazer;</li>
 <li>Obriga operação digital;</li>
 <li>Exige uso de capital próprio;</li>
 <li>Impõe critérios rigorosos de análise de crédito.</li>
 </ul>
 <p>Além disso, a SCD está sujeita a diversas normas:</p><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Regras do Banco Central (Bacen);</li>
 <li>Lei do Sistema Financeiro Nacional;</li>
 <li>Normas de prevenção à lavagem de dinheiro (PLD/FT);</li>
@@ -96,7 +96,7 @@ image_description: "Imagem gerada por IA"
 <h2>As operações da SCD são formalizadas por contratos legais</h2><br>
 
 <p>Entre os mecanismos de proteção:</p><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Análise rigorosa de crédito;</li>
 <li>Registro de contratos;</li>
 <li>Possibilidade de cobrança judicial;</li>
@@ -108,13 +108,13 @@ image_description: "Imagem gerada por IA"
 <h2>Tributação e possibilidades de redução de impostos</h2><br>
 
 <p>A SCD é tributada como uma instituição financeira, o que implica:</p><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Incidência de IRPJ e CSLL;</li>
 <li>PIS e COFINS sobre receitas financeiras;</li>
 <li>IOF sobre operações de crédito;</li>
 </ul>
 <p>Não existe uma “isenção ampla”, mas há estratégias legais para otimização tributária:</p><br>
-<ul>
+<ul style="margin-left: 5vw;">
 <li>Escolha adequada do regime (Lucro Real é o mais comum);</li>
 <li>Estruturação via fundos (FIDCs);</li>
 <li>Planejamento tributário com apoio contábil;</li>
