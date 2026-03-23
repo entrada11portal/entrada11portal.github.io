@@ -21,7 +21,7 @@ image_description: "Imagem gerada por IA"
 <li>Escalabilidade: pode crescer rapidamente com tecnologia;</li>
 <li>Regulação mais simples que a de bancos múltiplos, embora ainda rigorosa.</li>
 </ul>
-<p>Em relação a franquias, a diferença é ainda maior: a SCD não depende de marca licenciada nem de padronização comercial, sendo um negócio próprio com alto potencial financeiro — porém também com maior risco e exigência técnica.</p></p>
+<p>Em relação a franquias, a diferença é ainda maior: a SCD não depende de marca licenciada nem de padronização comercial, sendo um negócio próprio com alto potencial financeiro — porém também com maior risco e exigência técnica.</p><br>
 <h2>Origem do capital e investimento inicial</h2><br>
 <p>Um ponto fundamental: a SCD só pode operar com capital próprio, não podendo captar dinheiro de clientes como os bancos fazem. As principais fontes de capital são:</p><br>
 <ul style="margin-left: 5vw;">
