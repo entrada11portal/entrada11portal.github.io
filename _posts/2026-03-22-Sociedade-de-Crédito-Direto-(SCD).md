@@ -20,12 +20,12 @@ image_description: "Imagem gerada por IA"
 
 <p>Comparada a bancos tradicionais ou até franquias, a SCD apresenta algumas vantagens relevantes:</p><br>
 
-<ul>
-  <li>Menor burocracia operacional: não há necessidade de agências físicas;</li>
-<li>  Maior agilidade na concessão de crédito;</li>
-  <li>Custos estruturais mais baixos, já que opera digitalmente;</li>
-  <li>Escalabilidade: pode crescer rapidamente com tecnologia;</li>
-  <li>Regulação mais simples que a de bancos múltiplos, embora ainda rigorosa.</li>
+<ul style="margin-left: 2vw;">
+<li>Menor burocracia operacional: não há necessidade de agências físicas;</li>
+<li>Maior agilidade na concessão de crédito;</li>
+<li>Custos estruturais mais baixos, já que opera digitalmente;</li>
+<li>Escalabilidade: pode crescer rapidamente com tecnologia;</li>
+<li>Regulação mais simples que a de bancos múltiplos, embora ainda rigorosa.</li>
 </ul>
 
 <p>Em relação a franquias, a diferença é ainda maior: a SCD não depende de marca licenciada nem de padronização comercial, sendo um negócio próprio com alto potencial financeiro — porém também com maior risco e exigência técnica.
