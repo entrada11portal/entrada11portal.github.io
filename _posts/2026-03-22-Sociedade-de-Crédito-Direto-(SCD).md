@@ -36,7 +36,8 @@ c
 <li>O capital mínimo exigido é de cerca de R$ 1 milhão integralizado;</li>
 <li>Na prática, operações viáveis costumam exigir milhões adicionais para estrutura tecnológica, equipe, compliance e carteira de crédito.</li>
 <li>Burocracia e processo de abertura.</li>
-</ul></ul><br><h3>Abrir uma SCD não é simples. O processo envolve:</h3><br>
+</ul><br>
+<h3>Abrir uma SCD não é simples. O processo envolve:</h3><br>
 <ul style="margin-left: 5vw;">
 <li>Constituição da empresa;</li>
 <li>Elaboração de plano de negócios detalhado;</li>
