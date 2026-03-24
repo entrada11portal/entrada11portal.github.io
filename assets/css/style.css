@@ -227,14 +227,14 @@ main {
 .titulo {
     font-family: "Times New Roman", serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 24px;
     color: black;
     margin-top: 20px;
 }
 
 .subtitulo {
     font-family: "Times New Roman", serif;
-    font-size: 15px;
+    font-size: 20px;
     color: black;
     margin-top: 5px;
 }
@@ -263,13 +263,27 @@ main {
 
 .conteudo {
     font-family: "Times New Roman", serif;
-    font-size: 18px;
+    font-size: 16px;
     color: black;
     text-align: justify;
     margin-top: 20px;
     line-height: 1.6;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
 /* ================= PÁGINA NOTÍCIAS ================= */
 
 .pagina-noticias {
